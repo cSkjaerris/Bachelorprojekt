@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -dynamiclib -Wl,-headerpad_max_install_names  -o libHelloJNA.dylib -install_name @rpath/libHelloJNA.dylib CMakeFiles/HelloJNA.dir/library.cpp.o CMakeFiles/HelloJNA.dir/CHelloJNA.cpp.o 

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -dynamiclib -Wl,-headerpad_max_install_names  -o libsimpleDLL.dylib -install_name @rpath/libsimpleDLL.dylib CMakeFiles/simpleDLL.dir/simpleDLL.cpp.o CMakeFiles/simpleDLL.dir/Foo.cpp.o 

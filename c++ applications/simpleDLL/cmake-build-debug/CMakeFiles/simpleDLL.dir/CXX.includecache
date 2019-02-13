@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/Foo.cpp
+Foo.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/Foo.h
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/Foo.h
+string
+-
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/simpleDLL.cpp
+simpleDLL.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/simpleDLL.h
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/simpleDLL.h
+iostream
+-
+stdexcept
+-
+Foo.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/simpleDLL/Foo.h
+
