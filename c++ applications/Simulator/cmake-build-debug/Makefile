@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named SimulatorTest
+
+# Build rule for target.
+SimulatorTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SimulatorTest
+.PHONY : SimulatorTest
+
+# fast build rule for target.
+SimulatorTest/fast:
+	$(MAKE) -f CMakeFiles/SimulatorTest.dir/build.make CMakeFiles/SimulatorTest.dir/build
+.PHONY : SimulatorTest/fast
+
+#=============================================================================
 # Target rules for targets named Simulator
 
 # Build rule for target.
@@ -122,6 +135,33 @@ Simulator: cmake_check_build_system
 Simulator/fast:
 	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/build
 .PHONY : Simulator/fast
+
+DiscreteEventSimulator.o: DiscreteEventSimulator.cpp.o
+
+.PHONY : DiscreteEventSimulator.o
+
+# target to build an object file
+DiscreteEventSimulator.cpp.o:
+	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.o
+.PHONY : DiscreteEventSimulator.cpp.o
+
+DiscreteEventSimulator.i: DiscreteEventSimulator.cpp.i
+
+.PHONY : DiscreteEventSimulator.i
+
+# target to preprocess a source file
+DiscreteEventSimulator.cpp.i:
+	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.i
+.PHONY : DiscreteEventSimulator.cpp.i
+
+DiscreteEventSimulator.s: DiscreteEventSimulator.cpp.s
+
+.PHONY : DiscreteEventSimulator.s
+
+# target to generate assembly for a file
+DiscreteEventSimulator.cpp.s:
+	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.s
+.PHONY : DiscreteEventSimulator.cpp.s
 
 JNASimulatorLink.o: JNASimulatorLink.cpp.o
 
@@ -150,6 +190,33 @@ JNASimulatorLink.cpp.s:
 	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/JNASimulatorLink.cpp.s
 .PHONY : JNASimulatorLink.cpp.s
 
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/SimulatorTest.dir/build.make CMakeFiles/SimulatorTest.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/SimulatorTest.dir/build.make CMakeFiles/SimulatorTest.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/SimulatorTest.dir/build.make CMakeFiles/SimulatorTest.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +225,17 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... SimulatorTest"
 	@echo "... Simulator"
+	@echo "... DiscreteEventSimulator.o"
+	@echo "... DiscreteEventSimulator.i"
+	@echo "... DiscreteEventSimulator.s"
 	@echo "... JNASimulatorLink.o"
 	@echo "... JNASimulatorLink.i"
 	@echo "... JNASimulatorLink.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

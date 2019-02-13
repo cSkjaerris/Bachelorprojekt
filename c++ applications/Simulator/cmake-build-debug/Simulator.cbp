@@ -37,6 +37,48 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="SimulatorTest">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/SimulatorTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 SimulatorTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SimulatorTest/fast">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/SimulatorTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 SimulatorTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="Simulator">
 				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/libSimulator.dylib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug"/>
@@ -80,11 +122,20 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.cpp">
+			<Option target="Simulator"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.h">
+			<Option target="Simulator"/>
+		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/JNASimulatorLink.cpp">
 			<Option target="Simulator"/>
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/JNASimulatorLink.h">
 			<Option target="Simulator"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/main.cpp">
+			<Option target="SimulatorTest"/>
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

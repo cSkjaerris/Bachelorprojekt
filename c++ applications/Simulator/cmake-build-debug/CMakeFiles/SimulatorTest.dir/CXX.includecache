@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.cpp
-DiscreteEventSimulator.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.h
-
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.h
 map
 -
@@ -25,4 +21,10 @@ JNASimulatorLink.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/JNASimulatorLink.h
 iostream
 -
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/main.cpp
+iostream
+-
+DiscreteEventSimulator.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.h
 

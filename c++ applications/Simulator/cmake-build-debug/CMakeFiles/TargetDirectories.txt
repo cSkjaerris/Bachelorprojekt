@@ -1,3 +1,4 @@
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/CMakeFiles/SimulatorTest.dir
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/cmake-build-debug/CMakeFiles/Simulator.dir

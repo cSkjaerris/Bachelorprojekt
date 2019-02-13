@@ -12,4 +12,14 @@ extern "C"{
     double rval(int obs);
     double rvals(char* obs);
 }
+
+class SimulatorLink{
+public:
+    virtual double getTime() = 0;
+    virtual void performOneStepOfSimulation() = 0;
+    virtual void performWholeSimulation() = 0;
+    virtual void setSimulatorForNewSimulation(unsigned int seed) = 0;
+    virtual double rval(int obs) = 0;
+    virtual double  rval(string obs) = 0;
+};
 #endif

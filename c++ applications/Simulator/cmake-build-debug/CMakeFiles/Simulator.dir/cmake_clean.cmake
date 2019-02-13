@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Simulator.dir/JNASimulatorLink.cpp.o"
+  "CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.o"
   "libSimulator.pdb"
   "libSimulator.dylib"
 )

@@ -51,6 +51,7 @@ public class FirstCppApplication {
     }
 
     public static void main(String[] args) {
+        System.out.println(System.getProperty("java.library.path"));
         HelloLibrary.INSTANCE.sayHello("Foo");
 
         HelloLibrary.CHelloRequest req = new HelloLibrary.CHelloRequest();
