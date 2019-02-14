@@ -3,12 +3,27 @@ package mockupIntegration;
 public class TestSimulator {
     public static void main(String[] args) {
         SimulatorState sim = new SimulatorState();
-        double time = sim.getTime();
-        sim.performOneStepOfSimulation();
+
+        for(int i = 0; i < 2;i++){
+            sim.setSimulatorForNewSimulation(123);
+            for(int j = 0; j<51;j++){
+                if(j%5 == 0) {
+                    System.out.println(String.format("Run %d steps. Queue size is: %f, amount served: %f and time is: %f",j,sim.rval(0),sim.rval(""),sim.getTime()));
+                }
+                sim.performOneStepOfSimulation();
+            }
+            System.out.println("Testing with same seed");
+        }
+        sim.setSimulatorForNewSimulation(9876543);
+        for(int j = 0; j<51;j++){
+            if(j%5 == 0) {
+                System.out.println(String.format("Run %d steps. Queue size is: %f, amount served: %f and time is: %f",j,sim.rval(0),sim.rval(""),sim.getTime()));
+            }
+            sim.performOneStepOfSimulation();
+        }
+        System.out.println("Now testing whole simulation");
+        sim.setSimulatorForNewSimulation(75484356);
         sim.performWholeSimulation();
-        sim.setSimulatorForNewSimulation((int)time);
-        double val1 = sim.rval(1);
-        double val2 = sim.rval("test");
-        System.out.println(String.format("Time: %f\tval1: %f\tval2: %f",time,val1,val2));
+        System.out.println(String.format("Final served: %f. Time is now: %f",sim.rval(""),sim.getTime()));
     }
 }

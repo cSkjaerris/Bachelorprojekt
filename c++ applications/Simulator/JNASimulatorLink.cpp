@@ -1,25 +1,38 @@
 #include "JNASimulatorLink.h"
 
 double getTime(){
-    return 0;
+    return simulator->getTime();
 }
 
 void performOneStepOfSimulation(){
-    cout << "One step of simulation done" << endl;
+    simulator->performOneStepOfSimulation();
 }
 
 void performWholeSimulation(){
-    cout << "Whole simulation done" << endl;
+    simulator->performWholeSimulation();
 }
 
 void setSimulatorForNewSimulation(int seed){
-    cout << "Simulator set with seed: " << seed << endl;
+    fstream settingsFile;
+    settingsFile.open("/Users/casperskjaerris/Documents/cApp/settings.ini");
+    if(!settingsFile){
+        cerr << "Could not load settings file";
+        exit(1);
+    }
+    string simulatorType;
+    settingsFile >> simulatorType;
+    double Rc, Rd,closeTime;
+    settingsFile >> Rc;
+    settingsFile >> Rd;
+    settingsFile >> closeTime;
+    settingsFile.close();
+    simulator = new DiscreteEventSimulator(seed,Rc,Rd,closeTime);
 }
 
 double rval(int obs){
-    return 1;
+    return simulator->rval(obs);
 }
 
 double rvals(char* obs){
-    return 2;
+    return simulator->rval(string(obs));
 }

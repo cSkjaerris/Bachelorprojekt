@@ -3,8 +3,10 @@
 
 CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.o: ../DiscreteEventSimulator.cpp
 CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.o: ../DiscreteEventSimulator.h
-CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.o: ../JNASimulatorLink.h
+CMakeFiles/Simulator.dir/DiscreteEventSimulator.cpp.o: ../SimulatorLink.h
 
+CMakeFiles/Simulator.dir/JNASimulatorLink.cpp.o: ../DiscreteEventSimulator.h
 CMakeFiles/Simulator.dir/JNASimulatorLink.cpp.o: ../JNASimulatorLink.cpp
 CMakeFiles/Simulator.dir/JNASimulatorLink.cpp.o: ../JNASimulatorLink.h
+CMakeFiles/Simulator.dir/JNASimulatorLink.cpp.o: ../SimulatorLink.h
 

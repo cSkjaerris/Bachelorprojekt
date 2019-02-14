@@ -3,5 +3,6 @@
 
 CMakeFiles/SimulatorTest.dir/main.cpp.o: ../DiscreteEventSimulator.h
 CMakeFiles/SimulatorTest.dir/main.cpp.o: ../JNASimulatorLink.h
+CMakeFiles/SimulatorTest.dir/main.cpp.o: ../SimulatorLink.h
 CMakeFiles/SimulatorTest.dir/main.cpp.o: ../main.cpp
 

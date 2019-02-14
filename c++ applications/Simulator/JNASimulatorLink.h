@@ -2,24 +2,23 @@
 #define SIMULATOR_LIBRARY_H
 
 #include <iostream>
+#include <fstream>
+
+#include "SimulatorLink.h"
+#include "DiscreteEventSimulator.h"
+
 using namespace std;
 
+SimulatorLink* simulator;
+
 extern "C"{
-    double getTime();
-    void performOneStepOfSimulation();
-    void performWholeSimulation();
-    void setSimulatorForNewSimulation(int seed);
-    double rval(int obs);
-    double rvals(char* obs);
+double getTime();
+void performOneStepOfSimulation();
+void performWholeSimulation();
+void setSimulatorForNewSimulation(int seed);
+double rval(int obs);
+double rvals(char* obs);
 }
 
-class SimulatorLink{
-public:
-    virtual double getTime() = 0;
-    virtual void performOneStepOfSimulation() = 0;
-    virtual void performWholeSimulation() = 0;
-    virtual void setSimulatorForNewSimulation(unsigned int seed) = 0;
-    virtual double rval(int obs) = 0;
-    virtual double  rval(string obs) = 0;
-};
+
 #endif

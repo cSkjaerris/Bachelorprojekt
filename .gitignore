@@ -18,3 +18,5 @@ Multivesta meets c\+\+/\.idea/
 *.class
 
 c\+\+ applications/Simulator/\.idea/
+
+c\+\+ applications/Simulator/cmake-build-debug/CMakeFiles/Progress/

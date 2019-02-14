@@ -11,9 +11,14 @@ DiscreteEventSimulator::DiscreteEventSimulator(unsigned int seed, double rateOfC
     this->closeTime = closeTime;
     srand(this->seed);
     reset();
+    cout << "Seed: "<< this->seed << endl ;
+    cout << "Rate of customers: " << this->rateOfCustomers << endl;
+    cout << "Rate of desk: " << this->rateOfDesk << endl;
+    cout << "Close time: " << this->closeTime << endl;
 }
 
 void DiscreteEventSimulator::arrive(){
+    cout << "New customer arrived" << endl;
     if(simulationTime < closeTime){
         scheduleNextArrival();
     }
@@ -21,15 +26,16 @@ void DiscreteEventSimulator::arrive(){
         scheduleFinish();
         isDeskAvailable = false;
     } else{
-        deskQueue->push(Arrival);
+        deskQueue.push(Arrival);
     }
 }
 void DiscreteEventSimulator::finish(){
+    cout << "Customer finished" << endl;
     served++;
-    if(!deskQueue->empty()){
-        deskQueue->pop();
+    if(!deskQueue.empty()){
+        deskQueue.pop();
     }
-    if(deskQueue->empty()){
+    if(deskQueue.empty()){
         isDeskAvailable = true;
     }
 }
@@ -40,7 +46,8 @@ double DiscreteEventSimulator::getTime() {
 
 void DiscreteEventSimulator::performOneStepOfSimulation() {
     if(simulationTime < closeTime){
-        for(auto const& [key,val] : *this->eventMapping){
+        for(auto const& [key,val] : eventMapping){
+            cout << "Map first element [" <<key <<", " << val <<"]" <<endl;
             simulationTime = key;
             if(val == Arrival){
                 arrive();
@@ -49,8 +56,9 @@ void DiscreteEventSimulator::performOneStepOfSimulation() {
             }
             break;
         }
-        eventMapping->erase(simulationTime);
+        eventMapping.erase(simulationTime);
     }
+    cout << "Map first element" <<endl;
 }
 
 void DiscreteEventSimulator::performWholeSimulation() {
@@ -65,7 +73,7 @@ void DiscreteEventSimulator::setSimulatorForNewSimulation(unsigned int seed) {
 }
 
 double DiscreteEventSimulator::rval(int obs) {
-    return deskQueue->size();
+    return deskQueue.size();
 }
 
 double DiscreteEventSimulator::rval(string obs) {
@@ -74,34 +82,42 @@ double DiscreteEventSimulator::rval(string obs) {
 
 double DiscreteEventSimulator::calculateFinish() {
     double ran = rand()/double(RAND_MAX);
+    cout << "random number: " << ran << endl;
     return (-log(ran))/rateOfDesk;
 }
 
 double DiscreteEventSimulator::calculateNextArrival() {
     double ran = rand()/double(RAND_MAX);
+    cout << "random number: " << ran << endl;
+    double ret = (-log(ran))/rateOfCustomers;
+    cout << "exponential distribution number is: " << ret << endl;
     return (-log(ran))/rateOfCustomers;
 }
 
 void DiscreteEventSimulator::scheduleNextArrival() {
     double nextArrivalTime = calculateNextArrival();
+    cout << "Next arrival = " << nextArrivalTime << " + " << simulationTime << " = " << nextArrivalTime+simulationTime << endl;
     pair<double,Event> nextArrival = pair(nextArrivalTime+simulationTime,Arrival);
-    this->eventMapping->insert(nextArrival);
+    eventMapping.insert(nextArrival);
 }
 
 void DiscreteEventSimulator::scheduleFinish() {
     double finishTime = calculateFinish();
+    cout << "Next finish calculated to " << finishTime+simulationTime << endl;
     pair<double,Event> finish = pair(finishTime+simulationTime,Finished);
-    this->eventMapping->insert(finish);
+    eventMapping.insert(finish);
 }
 
 void DiscreteEventSimulator::reset() {
-    this->deskQueue = new queue<Event>;
-    this->eventMapping = new map<double,Event>;
-    this->served = 0;
-    this->simulationTime = 0;
-    this->isDeskAvailable = true;
+    deskQueue = queue<Event>();
+    eventMapping = map<double,Event>();
+    served = 0;
+    simulationTime = 0;
+    isDeskAvailable = true;
     pair<double,Event> firstEvent = pair(0,Arrival);
-    this->eventMapping->insert(firstEvent);
+    eventMapping.insert(firstEvent);
 }
+
+
 
 
