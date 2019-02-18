@@ -13,6 +13,7 @@ void performWholeSimulation(){
 }
 
 void setSimulatorForNewSimulation(int seed){
+    delete simulator;
     fstream settingsFile;
     settingsFile.open("/Users/casperskjaerris/Documents/cApp/settings.ini");
     if(!settingsFile){

@@ -11,24 +11,27 @@
 using namespace std;
 
 int main() {
+    string empty = "";
+    char* e = new char[empty.length() +1];
+    strcpy(e, empty.c_str());
     for (int j = 0; j < 2; j++) {
         setSimulatorForNewSimulation(123);
         for (int i = 0; i < 20; i++) {
             performOneStepOfSimulation();
             if (i == 5) {
-                cout << "After 5 steps queueSize = " << rval(0) << " and served is " << rvals("") << " .Time is "
+                cout << "After 5 steps queueSize = " << rval(0) << " and served is " << rvals(e) << " .Time is "
                      << getTime() << endl;
             }
             if (i == 10) {
-                cout << "After 10 steps queueSize = " << rval(0) << " and served is " << rvals("") << " .Time is "
+                cout << "After 10 steps queueSize = " << rval(0) << " and served is " << rvals(e) << " .Time is "
                      << getTime() << endl;
             }
             if (i == 15) {
-                cout << "After 15 steps queueSize = " << rval(0) << " and served is " << rvals("") << " .Time is "
+                cout << "After 15 steps queueSize = " << rval(0) << " and served is " << rvals(e) << " .Time is "
                      << getTime() << endl;
             }
         }
-        cout << "final served is " << rvals("") << " .Time is " << getTime() << endl;
+        cout << "final served is " << rvals(e) << " .Time is " << getTime() << endl;
         cout << "Trying again with same seed" << endl;
     }
     setSimulatorForNewSimulation(345678);
@@ -36,23 +39,25 @@ int main() {
     for (int i = 0; i < 20; i++) {
         performOneStepOfSimulation();
         if (i == 5) {
-            cout << "After 5 steps queueSize = " << rval(0) << " and served is " << rvals("") << " .Time is "
+            cout << "After 5 steps queueSize = " << rval(0) << " and served is " << rvals(e) << " .Time is "
                  << getTime() << endl;
         }
         if (i == 10) {
-            cout << "After 10 steps queueSize = " << rval(0) << " and served is " << rvals("") << " .Time is "
+            cout << "After 10 steps queueSize = " << rval(0) << " and served is " << rvals(e) << " .Time is "
                  << getTime() << endl;
         }
         if (i == 15) {
-            cout << "After 15 steps queueSize = " << rval(0) << " and served is " << rvals("") << " .Time is "
+            cout << "After 15 steps queueSize = " << rval(0) << " and served is " << rvals(e) << " .Time is "
                  << getTime() << endl;
         }
     }
-    cout << "final served is " << rvals("") << " .Time is " << getTime() << endl;
+    cout << "final served is " << rvals(e) << " .Time is " << getTime() << endl;
     setSimulatorForNewSimulation(987654321);
     cout << "Running to the end now. New instance" << endl;
     performWholeSimulation();
-    cout << "final served is " << rvals("") << " .Time is " << getTime() << endl;
+    cout << "final served is " << rvals(e) << " .Time is " << getTime() << endl;
+    double test = rval(0);
+    cout << "just checking queue size is " << test << endl;
     /*
     for(int i = 0; i<20;i++){
         simulator->performOneStepOfSimulation();

@@ -25,5 +25,6 @@ public class TestSimulator {
         sim.setSimulatorForNewSimulation(75484356);
         sim.performWholeSimulation();
         System.out.println(String.format("Final served: %f. Time is now: %f",sim.rval(""),sim.getTime()));
+        System.out.println(String.format("Just making sure queue size is %f",sim.rval(0)));
     }
 }

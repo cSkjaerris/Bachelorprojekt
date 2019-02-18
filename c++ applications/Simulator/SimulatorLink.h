@@ -11,6 +11,7 @@ using namespace std;
 
 class SimulatorLink{
 public:
+    ~SimulatorLink() = default;
     virtual double getTime() = 0;
     virtual void performOneStepOfSimulation() = 0;
     virtual void performWholeSimulation() = 0;
