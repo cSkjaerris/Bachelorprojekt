@@ -36,8 +36,7 @@ private:
     void finish();
     void scheduleNextArrival();
     void scheduleFinish();
-    double calculateNextArrival();
-    double calculateFinish();
+    double calculateNextExponential(double rate);
 public:
     DiscreteEventSimulator(unsigned int seed, double rateOfCustomers, double rateOfDesk, double closeTime);
     ~DiscreteEventSimulator() = default;

@@ -12,10 +12,10 @@ void performWholeSimulation(){
     simulator->performWholeSimulation();
 }
 
-void setSimulatorForNewSimulation(int seed){
+void setSimulatorForNewSimulation(int seed, char* settingsPath){
     delete simulator;
     fstream settingsFile;
-    settingsFile.open("/Users/casperskjaerris/Documents/cApp/settings.ini");
+    settingsFile.open(settingsPath);
     if(!settingsFile){
         cerr << "Could not load settings file";
         exit(1);

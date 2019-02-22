@@ -1,5 +1,5 @@
 package mockupIntegration;
-
+//Should have ParametersForState -> super(parameters)
 public class SimulatorState {
 
 	public double getTime() {

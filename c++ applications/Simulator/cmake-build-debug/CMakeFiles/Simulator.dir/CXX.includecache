@@ -22,6 +22,20 @@ random
 SimulatorLink.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/SimulatorLink.h
 
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/JNASimulatorLink.cpp
+JNASimulatorLink.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/JNASimulatorLink.h
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/JNASimulatorLink.h
+iostream
+-
+fstream
+-
+SimulatorLink.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/SimulatorLink.h
+DiscreteEventSimulator.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/DiscreteEventSimulator.h
+
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator/SimulatorLink.h
 iostream
 -

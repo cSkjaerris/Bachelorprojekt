@@ -9,7 +9,6 @@ DiscreteEventSimulator::DiscreteEventSimulator(unsigned int seed, double rateOfC
     this->rateOfCustomers = rateOfCustomers;
     this->rateOfDesk = rateOfDesk;
     this->closeTime = closeTime;
-    srand(this->seed);
     reset();
 }
 
@@ -40,16 +39,14 @@ double DiscreteEventSimulator::getTime() {
 }
 
 void DiscreteEventSimulator::performOneStepOfSimulation() {
-        for(auto const& [key,val] : *eventMapping){
-            simulationTime = key;
-            if(val == Arrival){
-                arrive();
-            } else{
-                finish();
-            }
-            break;
-        }
-        eventMapping->erase(simulationTime);
+    auto pair = eventMapping->begin();
+    simulationTime = pair->first;
+    if(pair->second == Arrival){
+        arrive();
+    } else{
+        finish();
+    }
+    eventMapping->erase(simulationTime);
 }
 
 void DiscreteEventSimulator::performWholeSimulation() {
@@ -59,37 +56,29 @@ void DiscreteEventSimulator::performWholeSimulation() {
 
 void DiscreteEventSimulator::setSimulatorForNewSimulation(unsigned int seed) {
     this->seed = seed;
-    srand(seed);
     reset();
 }
 
 double DiscreteEventSimulator::rval(int obs) {
-    return deskQueue->size();
+    return 0;
 }
 
 double DiscreteEventSimulator::rval(string obs) {
-    return served;
-}
-
-double DiscreteEventSimulator::calculateFinish() {
-    double ran = rand()/double(RAND_MAX);
-    return (-log(ran))/rateOfDesk;
-}
-
-double DiscreteEventSimulator::calculateNextArrival() {
-    double ran = rand()/double(RAND_MAX);
-    double ret = (-log(ran))/rateOfCustomers;
-    return (-log(ran))/rateOfCustomers;
+    if(obs == "served")
+        return served;
+    if(obs == "queueSize")
+        return deskQueue->size();
+    return 0; //Default case
 }
 
 void DiscreteEventSimulator::scheduleNextArrival() {
-    double nextArrivalTime = calculateNextArrival();
+    double nextArrivalTime = calculateNextExponential(rateOfCustomers);
     pair<double,Event> nextArrival = pair(nextArrivalTime+simulationTime,Arrival);
     eventMapping->insert(nextArrival);
 }
 
 void DiscreteEventSimulator::scheduleFinish() {
-    double finishTime = calculateFinish();
+    double finishTime = calculateNextExponential(rateOfDesk);
     pair<double,Event> finish = pair(finishTime+simulationTime,Finished);
     eventMapping->insert(finish);
 }
@@ -100,8 +89,14 @@ void DiscreteEventSimulator::reset() {
     served = 0;
     simulationTime = 0;
     isDeskAvailable = true;
+    srand(this->seed);
     pair<double,Event> firstEvent = pair(0,Arrival);
     eventMapping->insert(firstEvent);
+}
+
+double DiscreteEventSimulator::calculateNextExponential(double rate) {
+    double ran = rand()/double(RAND_MAX);
+    return (-log(ran))/rate;
 }
 
 
