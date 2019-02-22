@@ -1,6 +1,14 @@
 package mockupIntegration;
-//Should have ParametersForState -> super(parameters)
-public class SimulatorState {
+
+import vesta.mc.NewState;
+import vesta.mc.ParametersForState;
+import vesta.quatex.DEFAULTOBSERVATIONS;
+
+public class SimulatorState extends NewState {
+
+	public SimulatorState(ParametersForState parameters) {
+		super(parameters);
+	}
 
 	public double getTime() {
 		return JNASimulatorLink.INSTANCE.getTime();
@@ -15,7 +23,7 @@ public class SimulatorState {
 	}
 
 	public void setSimulatorForNewSimulation(int seed) {
-		JNASimulatorLink.INSTANCE.setSimulatorForNewSimulation(seed);
+		JNASimulatorLink.INSTANCE.setSimulatorForNewSimulation(seed,"/Users/casperskjaerris/Documents/cApp/settings.ini");
 	}
 
 	public double rval(int obs) {
@@ -23,6 +31,10 @@ public class SimulatorState {
 	}
 
 	public double rval(String obs) {
+		obs = obs.trim();
+		if(obs.equalsIgnoreCase(DEFAULTOBSERVATIONS.STEPS.toString())){
+			return (double)this.getNumberOfSteps();
+		}
 		return JNASimulatorLink.INSTANCE.rvals(obs);
 	}
 

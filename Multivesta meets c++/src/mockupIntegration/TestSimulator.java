@@ -1,8 +1,10 @@
 package mockupIntegration;
 
+import vesta.mc.ParametersForState;
+
 public class TestSimulator {
     public static void main(String[] args) {
-        SimulatorState sim = new SimulatorState();
+        SimulatorState sim = new SimulatorState(new ParametersForState("",""));
 
         for(int i = 0; i < 2;i++){
             sim.setSimulatorForNewSimulation(123);

@@ -9,7 +9,7 @@ public interface JNASimulatorLink extends Library {
     double getTime();
     void performOneStepOfSimulation();
     void performWholeSimulation();
-    void setSimulatorForNewSimulation(int seed);
+    void setSimulatorForNewSimulation(int seed, String settingsPath);
     double rval(int obs);
     double rvals(String obs);
 }
