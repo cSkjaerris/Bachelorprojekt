@@ -22,3 +22,17 @@ c\+\+ applications/Simulator/\.idea/
 c\+\+ applications/Simulator/cmake-build-debug/CMakeFiles/Progress/
 
 *.xlsx
+
+c\+\+ applications/BankSimulator/\.idea/
+
+*.bin
+
+*.out
+
+c\+\+ applications/FinanceSimulator/\.idea/
+
+c\+\+ applications/InventoryManagementSimulator/\.idea/
+
+c\+\+ applications/JNALink/\.idea/
+
+Multivesta meets c\+\+/MultiVeStA_OUTPUT/

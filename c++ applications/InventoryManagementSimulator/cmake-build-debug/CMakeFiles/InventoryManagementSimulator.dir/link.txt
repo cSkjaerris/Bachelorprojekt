@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -dynamiclib -Wl,-headerpad_max_install_names  -o libInventoryManagementSimulator.dylib -install_name @rpath/libInventoryManagementSimulator.dylib CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o 

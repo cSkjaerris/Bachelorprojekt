@@ -1,10 +1,6 @@
-//
-// Created by Casper Skjærris on 2019-02-13.
-//
+#include "BankSimulator.h"
 
-#include "DiscreteEventSimulator.h"
-
-DiscreteEventSimulator::DiscreteEventSimulator(unsigned int seed, double rateOfCustomers, double rateOfDesk, double closeTime) {
+BankSimulator::BankSimulator(unsigned int seed, double rateOfCustomers, double rateOfDesk, double closeTime) {
     this->seed = seed;
     this->rateOfCustomers = rateOfCustomers;
     this->rateOfDesk = rateOfDesk;
@@ -12,8 +8,7 @@ DiscreteEventSimulator::DiscreteEventSimulator(unsigned int seed, double rateOfC
     reset();
 }
 
-void DiscreteEventSimulator::arrive(){
-    arrived++;
+void BankSimulator::arrive(){
     if(simulationTime < closeTime){
         scheduleNextArrival();
     }
@@ -24,7 +19,7 @@ void DiscreteEventSimulator::arrive(){
         deskQueue->push(Arrival);
     }
 }
-void DiscreteEventSimulator::finish(){
+void BankSimulator::finish(){
     served++;
     if(!deskQueue->empty()){
         deskQueue->pop();
@@ -35,11 +30,11 @@ void DiscreteEventSimulator::finish(){
     }
 }
 
-double DiscreteEventSimulator::getTime() {
+double BankSimulator::getTime() {
     return simulationTime;
 }
 
-void DiscreteEventSimulator::performOneStepOfSimulation() {
+void BankSimulator::performOneStepOfSimulation() {
     auto pair = eventMapping->begin();
     simulationTime = pair->first;
     if(pair->second == Arrival){
@@ -50,61 +45,52 @@ void DiscreteEventSimulator::performOneStepOfSimulation() {
     eventMapping->erase(simulationTime);
 }
 
-void DiscreteEventSimulator::performWholeSimulation() {
+void BankSimulator::performWholeSimulation() {
     while(!eventMapping->empty())
         performOneStepOfSimulation();
 }
 
-void DiscreteEventSimulator::setSimulatorForNewSimulation(unsigned int seed) {
+void BankSimulator::setSimulatorForNewSimulation(unsigned int seed) {
     this->seed = seed;
     reset();
 }
 
-double DiscreteEventSimulator::rval(int obs) {
+double BankSimulator::rval(int obs) {
     return 0;
 }
 
-double DiscreteEventSimulator::rval(string obs) {
+double BankSimulator::rval(string obs) {
     if(obs == "served")
         return served;
     if(obs == "queueSize")
         return deskQueue->size();
-    if(obs == "hasArrived"){
-        return arrived;
-    }
     return 0; //Default case
 }
 
-void DiscreteEventSimulator::scheduleNextArrival() {
+void BankSimulator::scheduleNextArrival() {
     double nextArrivalTime = calculateNextExponential(rateOfCustomers);
     pair<double,Event> nextArrival = pair(nextArrivalTime+simulationTime,Arrival);
     eventMapping->insert(nextArrival);
 }
 
-void DiscreteEventSimulator::scheduleFinish() {
+void BankSimulator::scheduleFinish() {
     double finishTime = calculateNextExponential(rateOfDesk);
     pair<double,Event> finish = pair(finishTime+simulationTime,Finished);
     eventMapping->insert(finish);
 }
 
-void DiscreteEventSimulator::reset() {
+void BankSimulator::reset() {
     deskQueue = new queue<Event>();
     eventMapping = new map<double,Event>();
     served = 0;
     simulationTime = 0;
     isDeskAvailable = true;
-    arrived = 0;
     srand(this->seed);
-    double firstArrival = calculateNextExponential(rateOfCustomers);
-    pair<double,Event> firstEvent = pair(firstArrival,Arrival);
+    pair<double,Event> firstEvent = pair(0,Arrival);
     eventMapping->insert(firstEvent);
 }
 
-double DiscreteEventSimulator::calculateNextExponential(double rate) {
+double BankSimulator::calculateNextExponential(double rate) {
     double ran = rand()/double(RAND_MAX);
     return (-log(ran))/rate;
 }
-
-
-
-

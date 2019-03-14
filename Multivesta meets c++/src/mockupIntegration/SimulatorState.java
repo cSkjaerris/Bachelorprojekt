@@ -5,9 +5,12 @@ import vesta.mc.ParametersForState;
 import vesta.quatex.DEFAULTOBSERVATIONS;
 
 public class SimulatorState extends NewState {
+	private String simulatorSettingsPath; //"/Users/casperskjaerris/Documents/cApp/settings.ini"
 
 	public SimulatorState(ParametersForState parameters) {
 		super(parameters);
+		simulatorSettingsPath = parameters.getModel();
+
 	}
 
 	public double getTime() {
@@ -23,7 +26,7 @@ public class SimulatorState extends NewState {
 	}
 
 	public void setSimulatorForNewSimulation(int seed) {
-		JNASimulatorLink.INSTANCE.setSimulatorForNewSimulation(seed,"/Users/casperskjaerris/Documents/cApp/settings.ini");
+		JNASimulatorLink.INSTANCE.setSimulatorForNewSimulation(seed,simulatorSettingsPath);
 	}
 
 	public double rval(int obs) {
@@ -34,6 +37,8 @@ public class SimulatorState extends NewState {
 		obs = obs.trim();
 		if(obs.equalsIgnoreCase(DEFAULTOBSERVATIONS.STEPS.toString())){
 			return (double)this.getNumberOfSteps();
+		} else if (obs.equalsIgnoreCase("time")){
+			return getTime();
 		}
 		return JNASimulatorLink.INSTANCE.rvals(obs);
 	}

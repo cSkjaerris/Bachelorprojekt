@@ -29,6 +29,7 @@ private:
     double closeTime;
     bool isDeskAvailable;
     unsigned int served;
+    int arrived;
     map<double,Event>* eventMapping;
     queue<Event>* deskQueue;
     void reset();
