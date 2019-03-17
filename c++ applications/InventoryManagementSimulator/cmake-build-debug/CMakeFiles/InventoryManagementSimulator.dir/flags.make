@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC   -std=gnu++1z
 
 CXX_DEFINES = -DInventoryManagementSimulator_EXPORTS
 
-CXX_INCLUDES = -I/Users/casperskjaerris/Documents/cApp/JNALink/include 
+CXX_INCLUDES = 
 

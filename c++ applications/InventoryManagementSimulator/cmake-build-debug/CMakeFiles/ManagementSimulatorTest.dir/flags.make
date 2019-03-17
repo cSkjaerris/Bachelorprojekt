@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/casperskjaerris/Documents/cApp/JNALink/include 
+CXX_INCLUDES = 
 

@@ -17,14 +17,12 @@ map
 -
 fstream
 -
+iostream
+-
 Shop.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/Shop.h
-SimulatorLink.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/SimulatorLink.h
 
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/JNALink.h
-SimulatorLink.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/SimulatorLink.h
 InventoryManagementSimulator.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/InventoryManagementSimulator.h
 
@@ -39,8 +37,4 @@ InventoryManagementSimulator.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/InventoryManagementSimulator.h
 JNALink.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/JNALink.h
-
-/Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
-iostream
--
 

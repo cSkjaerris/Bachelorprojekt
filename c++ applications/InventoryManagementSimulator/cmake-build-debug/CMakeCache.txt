@@ -215,15 +215,6 @@ InventoryManagementSimulator_BINARY_DIR:STATIC=/Users/casperskjaerris/Documents/
 //Value Computed by CMake
 InventoryManagementSimulator_SOURCE_DIR:STATIC=/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator
 
-//Path to a file.
-JNALink_INCLUDEDIR:PATH=/Users/casperskjaerris/Documents/cApp/JNALink/include
-
-//Path to a library.
-JNALink_LIBRARY:FILEPATH=/Users/casperskjaerris/Documents/cApp/libJNALink.dylib
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
-
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
@@ -369,10 +360,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v0.29.2()]
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 

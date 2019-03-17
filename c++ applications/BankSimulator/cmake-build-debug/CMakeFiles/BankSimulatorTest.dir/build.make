@@ -80,7 +80,7 @@ BankSimulatorTest_EXTERNAL_OBJECTS =
 BankSimulatorTest: CMakeFiles/BankSimulatorTest.dir/main.cpp.o
 BankSimulatorTest: CMakeFiles/BankSimulatorTest.dir/build.make
 BankSimulatorTest: libBankSimulator.dylib
-BankSimulatorTest: /Users/casperskjaerris/Documents/cApp/libJNALink.dylib
+BankSimulatorTest: /Users/casperskjaerris/Documents/cApp/JNALink/lib/libJNALink.a
 BankSimulatorTest: CMakeFiles/BankSimulatorTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable BankSimulatorTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BankSimulatorTest.dir/link.txt --verbose=$(VERBOSE)

@@ -5,9 +5,10 @@
 #include <vector>
 #include <map>
 #include <fstream>
+#include <iostream>
 
 #include "Shop.h"
-#include "SimulatorLink.h"
+//#include "SimulatorLink.h"
 
 using namespace std;
 enum Event{
@@ -20,7 +21,7 @@ enum Event{
     PaymentForDelivery
 };
 
-class InventoryManagementSimulator : public SimulatorLink{
+class InventoryManagementSimulator {//: public SimulatorLink{
 private:
     int simulationTime;
     int endSimulation;
@@ -48,12 +49,12 @@ public:
     int getSoldProducts() const;
 
     int getLostSales() const;
-    double getTime() override;
-    void performOneStepOfSimulation() override;
-    void performWholeSimulation() override;
-    void setSimulatorForNewSimulation(unsigned int seed, string settingsPath) override;
-    double rval(int obs) override;
-    double rval(string obs) override;
+    double getTime(); //override;
+    void performOneStepOfSimulation(); //override;
+    void performWholeSimulation(); //override;
+    void setSimulatorForNewSimulation(unsigned int seed, string settingsPath);// override;
+    double rval(int obs);// override;
+    double rval(string obs);// override;
 
 };
 

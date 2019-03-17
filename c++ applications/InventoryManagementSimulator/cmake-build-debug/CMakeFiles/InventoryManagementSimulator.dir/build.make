@@ -94,7 +94,6 @@ InventoryManagementSimulator_EXTERNAL_OBJECTS =
 libInventoryManagementSimulator.dylib: CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o
 libInventoryManagementSimulator.dylib: CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o
 libInventoryManagementSimulator.dylib: CMakeFiles/InventoryManagementSimulator.dir/build.make
-libInventoryManagementSimulator.dylib: /Users/casperskjaerris/Documents/cApp/libJNALink.dylib
 libInventoryManagementSimulator.dylib: CMakeFiles/InventoryManagementSimulator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libInventoryManagementSimulator.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/InventoryManagementSimulator.dir/link.txt --verbose=$(VERBOSE)

@@ -20,7 +20,6 @@ int main() {
     strcpy(served,s.c_str());
 
     auto *sim = new BankSimulator(123,settingsPath);
-    registerSimulator(sim);
     for (int j = 0; j < 2; j++) {
         setSimulatorForNewSimulation(123,settingsPath);
         for (int i = 0; i < 20; i++) {

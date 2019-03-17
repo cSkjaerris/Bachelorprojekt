@@ -1,11 +1,13 @@
-package mockupIntegration;
+package inventoryManagementTesting;
 
+import com.sun.jna.Native;
 import vesta.mc.ParametersForState;
 
-public class TestSimulator {
+public class TestInventory {
     public static void main(String[] args) {
+        Native.setProtected(true);
         System.setProperty("jna.library.path","/Users/casperskjaerris/Documents/cApp");
-        SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/settings.ini",""));
+        SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/InvManSetting.cfg",""));
 
         for(int i = 0; i < 2;i++){
             sim.setSimulatorForNewSimulation(123);

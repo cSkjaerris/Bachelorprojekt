@@ -2,15 +2,14 @@
 // Created by Casper Skjærris on 2019-03-17.
 //
 
-#ifndef INVENTORYMANAGEMENTSIMULATOR_JNALINK_H
-#define INVENTORYMANAGEMENTSIMULATOR_JNALINK_H
+#ifndef BANKSIMULATOR_JNALINK_H
+#define BANKSIMULATOR_JNALINK_H
 
-//#include "SimulatorLink.h"
-#include "InventoryManagementSimulator.h"
+#include "BankSimulator.h"
 using namespace std;
 
 //SimulatorLink* simulator;
-InventoryManagementSimulator* simulator;
+BankSimulator* simulator;
 
 extern "C"{
 double getTime();
@@ -22,4 +21,4 @@ double rvals(char* obs);
 }
 
 
-#endif //INVENTORYMANAGEMENTSIMULATOR_JNALINK_H
+#endif //BANKSIMULATOR_JNALINK_H

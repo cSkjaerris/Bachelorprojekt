@@ -10,14 +10,14 @@ add_library(InventoryManagementSimulator SHARED InventoryManagementSimulator.cpp
 add_executable(ManagementSimulatorTest main.cpp)
 
 
-include(FindPkgConfig)
-find_package(JNALink REQUIRED)
-include_directories(${JNALink_INCLUDEDIR})
+#include(FindPkgConfig)
+#find_package(JNALink REQUIRED)
+#include_directories(${JNALink_INCLUDEDIR})
 
-message( ${JNALink_LIBRARY} )
+#message( ${JNALink_LIBRARY} )
 
-target_link_libraries(${PROJECT_NAME} ${JNALink_LIBRARY})
+#target_link_libraries(${PROJECT_NAME} ${JNALink_LIBRARY})
 
 target_link_libraries(ManagementSimulatorTest InventoryManagementSimulator)
 
-target_link_libraries(ManagementSimulatorTest ${JNALink_LIBRARY})
+#target_link_libraries(ManagementSimulatorTest ${JNALink_LIBRARY})

@@ -1,10 +1,10 @@
-package mockupIntegration;
+package inventoryManagementTesting;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 
-public interface JNASimulatorLink extends Library {
-    JNASimulatorLink INSTANCE = (JNASimulatorLink) Native.load("BankSimulator", JNASimulatorLink.class);
+public interface JNALink extends Library {
+    JNALink INSTANCE = (JNALink) Native.load("InventoryManagementSimulator", JNALink.class);
 
     double getTime();
     void performOneStepOfSimulation();
