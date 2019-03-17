@@ -36,3 +36,13 @@ c\+\+ applications/InventoryManagementSimulator/\.idea/
 c\+\+ applications/JNALink/\.idea/
 
 Multivesta meets c\+\+/MultiVeStA_OUTPUT/
+
+c\+\+ applications/BankSimulator/cmake-build-debug/BankSimulatorTest
+
+c\+\+ applications/InventoryManagementSimulator/cmake-build-debug/ManagementSimulatorTest
+
+libspsim\.zip
+
+libspsim/
+
+*.log

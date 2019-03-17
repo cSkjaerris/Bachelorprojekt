@@ -80,6 +80,7 @@ ManagementSimulatorTest_EXTERNAL_OBJECTS =
 ManagementSimulatorTest: CMakeFiles/ManagementSimulatorTest.dir/main.cpp.o
 ManagementSimulatorTest: CMakeFiles/ManagementSimulatorTest.dir/build.make
 ManagementSimulatorTest: libInventoryManagementSimulator.dylib
+ManagementSimulatorTest: /Users/casperskjaerris/Documents/cApp/libJNALink.dylib
 ManagementSimulatorTest: CMakeFiles/ManagementSimulatorTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ManagementSimulatorTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ManagementSimulatorTest.dir/link.txt --verbose=$(VERBOSE)

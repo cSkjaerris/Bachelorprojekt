@@ -3,28 +3,8 @@
 InventoryManagementSimulator::InventoryManagementSimulator(){
     daysForResplenishingDistribution = uniform_int_distribution(1,3);
     sampleQuantityDistribution = uniform_int_distribution(5,10);
-    initialize();
-}
-void InventoryManagementSimulator::initialize() {
     seed = 9876543;
-    generator = default_random_engine(seed);
-    simulationTime = 0;
-    endSimulation = 365;
-    numberOfRestocking = 0;
-    soldProducts = 0;
-    lostSales = 0;
-    deliveryQuantity = new map<int,int>();
-    singleProductShop = new Shop();
-    singleProductShop->inventory = new Inventory();
-    singleProductShop->inventory->targetInventory = 25;
-    singleProductShop->inventory->reorderPoint = 5;
-    auto initialStock = uniform_int_distribution(singleProductShop->inventory->reorderPoint,singleProductShop->inventory->targetInventory);
-    singleProductShop->inventory->productInStock = initialStock(generator);
-    eventMapping = new map<int,vector<Event>>();
-    auto firstDailyDemand = new vector<Event>();
-    firstDailyDemand->insert(firstDailyDemand->begin(),DailyDemand);
-    eventMapping->insert(pair(1,*firstDailyDemand));
-
+    reset(365,25,5);
 }
 
 void InventoryManagementSimulator::dailyDemand() {
@@ -114,4 +94,73 @@ void InventoryManagementSimulator::sendDeliveryRequest(int orderSize) {
     }
     orderSize +=currentDeliveryQuantity;
     deliveryQuantity->insert(pair(shipmentDay,orderSize));
+}
+
+double InventoryManagementSimulator::getTime(){
+    return simulationTime;
+}
+void InventoryManagementSimulator::performOneStepOfSimulation(){
+    performSimulationStep();
+}
+void InventoryManagementSimulator::performWholeSimulation() {
+    completeSimulation();
+}
+void InventoryManagementSimulator::setSimulatorForNewSimulation(unsigned int seed, string settingsPath) {
+    this->seed = seed;
+    fstream settingsFile;
+    settingsFile.open(settingsPath);
+    if(!settingsFile){
+        cerr << "Could not load settings file";
+        exit(1);
+    }
+
+    int endTime, targetInv, reorderPoint;
+    settingsFile >> endTime;
+    settingsFile >> targetInv;
+    settingsFile >> reorderPoint;
+    settingsFile.close();
+    reset(endTime,targetInv,reorderPoint);
+
+}
+double InventoryManagementSimulator::rval(int obs){
+    return 0;
+}
+double InventoryManagementSimulator::rval(string obs){
+    if (obs == "numberOfRestocking"){
+        return numberOfRestocking;
+    }
+    if (obs == "soldProducts"){
+        return soldProducts;
+    }
+    if (obs == "lostSales"){
+        return lostSales;
+    }
+    return -1;
+}
+
+void InventoryManagementSimulator::reset(int endTime, unsigned int targetInventory, unsigned int reorderPoint){
+    generator = generator = default_random_engine(seed);
+    simulationTime = 0;
+    endSimulation = endTime;
+    delete deliveryQuantity;
+    deliveryQuantity = new map<int,int>();
+    delete singleProductShop;
+    numberOfRestocking = 0;
+    soldProducts = 0;
+    lostSales = 0;
+    singleProductShop = new Shop();
+    singleProductShop->inventory = new Inventory();
+    singleProductShop->inventory->targetInventory = targetInventory;
+    singleProductShop->inventory->reorderPoint = reorderPoint;
+
+
+    auto initialStock = uniform_int_distribution(singleProductShop->inventory->reorderPoint,singleProductShop->inventory->targetInventory);
+    singleProductShop->inventory->productInStock = initialStock(generator);
+
+    delete eventMapping;
+    eventMapping = new map<int,vector<Event>>();
+
+    auto firstDailyDemand = new vector<Event>();
+    firstDailyDemand->insert(firstDailyDemand->begin(),DailyDemand);
+    eventMapping->insert(pair(1,*firstDailyDemand));
 }

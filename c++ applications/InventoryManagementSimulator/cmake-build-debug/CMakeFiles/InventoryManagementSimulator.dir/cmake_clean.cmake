@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o"
+  "CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o"
   "libInventoryManagementSimulator.pdb"
   "libInventoryManagementSimulator.dylib"
 )

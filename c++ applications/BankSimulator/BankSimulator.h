@@ -5,8 +5,9 @@
 #include <queue>
 #include <math.h>
 #include <random>
+#include <fstream>
 
-#include
+#include "SimulatorLink.h"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ enum Event{
     Finished
 };
 
-class BankSimulator{
+class BankSimulator : public SimulatorLink{
 private:
     double simulationTime;
     unsigned int seed;
@@ -26,21 +27,21 @@ private:
     unsigned int served;
     map<double,Event>* eventMapping;
     queue<Event>* deskQueue;
-    void reset();
+    void reset(string settingsPath);
     void arrive();
     void finish();
     void scheduleNextArrival();
     void scheduleFinish();
     double calculateNextExponential(double rate);
 public:
-    BankSimulator(unsigned int seed, double rateOfCustomers, double rateOfDesk, double closeTime);
+    BankSimulator(unsigned int seed, string settingsPath);
     ~BankSimulator() = default;
-    double getTime();
-    void performOneStepOfSimulation();
-    void performWholeSimulation();
-    void setSimulatorForNewSimulation(unsigned int seed);
-    double rval(int obs);
-    double rval(string obs);
+    double getTime() override;
+    void performOneStepOfSimulation() override;
+    void performWholeSimulation() override;
+    void setSimulatorForNewSimulation(unsigned int seed, string settingsPath) override;
+    double rval(int obs) override;
+    double rval(string obs) override;
 };
 
 

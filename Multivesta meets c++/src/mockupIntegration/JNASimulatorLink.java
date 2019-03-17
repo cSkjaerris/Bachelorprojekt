@@ -4,7 +4,7 @@ import com.sun.jna.Library;
 import com.sun.jna.Native;
 
 public interface JNASimulatorLink extends Library {
-    JNASimulatorLink INSTANCE = (JNASimulatorLink) Native.load("Simulator", JNASimulatorLink.class);
+    JNASimulatorLink INSTANCE = (JNASimulatorLink) Native.load("InventoryManagementSimulator", JNASimulatorLink.class);
 
     double getTime();
     void performOneStepOfSimulation();

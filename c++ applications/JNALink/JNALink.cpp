@@ -1,5 +1,8 @@
 #include "JNALink.h"
 
+void registerSimulator(SimulatorLink* sim){
+    simulator = sim;
+}
 
 double getTime(){
     return simulator->getTime();
@@ -14,21 +17,7 @@ void performWholeSimulation(){
 }
 
 void setSimulatorForNewSimulation(int seed, char* settingsPath){
-    delete simulator;
-    fstream settingsFile;
-    settingsFile.open(settingsPath);
-    if(!settingsFile){
-        cerr << "Could not load settings file";
-        exit(1);
-    }
-    string simulatorType;
-    settingsFile >> simulatorType;
-    double Rc, Rd,closeTime;
-    settingsFile >> Rc;
-    settingsFile >> Rd;
-    settingsFile >> closeTime;
-    settingsFile.close();
-    simulator = new SimulatorLink();
+    simulator->setSimulatorForNewSimulation(seed, string(settingsPath));
 }
 
 double rval(int obs){

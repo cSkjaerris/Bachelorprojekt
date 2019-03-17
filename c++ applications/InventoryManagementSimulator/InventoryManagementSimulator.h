@@ -4,8 +4,10 @@
 #include <random>
 #include <vector>
 #include <map>
+#include <fstream>
 
 #include "Shop.h"
+#include "SimulatorLink.h"
 
 using namespace std;
 enum Event{
@@ -18,7 +20,7 @@ enum Event{
     PaymentForDelivery
 };
 
-class InventoryManagementSimulator{
+class InventoryManagementSimulator : public SimulatorLink{
 private:
     int simulationTime;
     int endSimulation;
@@ -33,9 +35,9 @@ private:
     int soldProducts;
     int lostSales;
     void sendDeliveryRequest(int orderSize);
-    void initialize();
     void dailyDemand();
     void delivery();
+    void reset(int endTime, unsigned int targetInventory, unsigned int reorderPoint);
 public:
     InventoryManagementSimulator();
     ~InventoryManagementSimulator() = default;
@@ -46,6 +48,12 @@ public:
     int getSoldProducts() const;
 
     int getLostSales() const;
+    double getTime() override;
+    void performOneStepOfSimulation() override;
+    void performWholeSimulation() override;
+    void setSimulatorForNewSimulation(unsigned int seed, string settingsPath) override;
+    double rval(int obs) override;
+    double rval(string obs) override;
 
 };
 

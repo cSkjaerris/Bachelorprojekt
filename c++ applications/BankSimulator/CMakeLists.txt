@@ -3,10 +3,19 @@ project(BankSimulator)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(libraryPath "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Simulator")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-set(importedHeaders ${libraryPath}/SimulatorLink.h)
-add_library(BankSimulator SHARED BankSimulator.cpp BankSimulator.h ${importedHeaders})
+add_library(BankSimulator SHARED BankSimulator.cpp BankSimulator.h)
 
+add_executable(BankSimulatorTest main.cpp)
 
-target_link_libraries(BankSimulator)
+include(FindPkgConfig)
+find_package(JNALink REQUIRED)
+include_directories(${JNALink_INCLUDEDIR})
+
+message(${JNALink_LIBRARY})
+
+target_link_libraries(${PROJECT_NAME} ${JNALink_LIBRARY})
+
+target_link_libraries(BankSimulatorTest ${PROJECT_NAME})
+

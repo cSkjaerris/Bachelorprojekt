@@ -65,6 +65,43 @@ CMAKE_SOURCE_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorpro
 CMAKE_BINARY_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug"
 
 #=============================================================================
+# Target rules for target CMakeFiles/BankSimulatorTest.dir
+
+# All Build rule for target.
+CMakeFiles/BankSimulatorTest.dir/all: CMakeFiles/BankSimulator.dir/all
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/depend
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target BankSimulatorTest"
+.PHONY : CMakeFiles/BankSimulatorTest.dir/all
+
+# Include target in all.
+all: CMakeFiles/BankSimulatorTest.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BankSimulatorTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BankSimulatorTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/BankSimulatorTest.dir/rule
+
+# Convenience name for target.
+BankSimulatorTest: CMakeFiles/BankSimulatorTest.dir/rule
+
+.PHONY : BankSimulatorTest
+
+# clean rule for target.
+CMakeFiles/BankSimulatorTest.dir/clean:
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/clean
+.PHONY : CMakeFiles/BankSimulatorTest.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/BankSimulatorTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/BankSimulator.dir
 
 # All Build rule for target.

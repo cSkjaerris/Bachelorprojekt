@@ -5,11 +5,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/InventoryManagementSimulator.cpp" "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/cmake-build-debug/CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o"
+  "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/JNALink.cpp" "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/cmake-build-debug/CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/Users/casperskjaerris/Documents/cApp/JNALink/include"
   )
 
 # Targets to which this target links.

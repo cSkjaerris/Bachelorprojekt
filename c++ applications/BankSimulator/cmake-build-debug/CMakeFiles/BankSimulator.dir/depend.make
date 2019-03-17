@@ -3,4 +3,5 @@
 
 CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o: ../BankSimulator.cpp
 CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o: ../BankSimulator.h
+CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
 

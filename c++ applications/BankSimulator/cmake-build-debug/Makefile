@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named BankSimulatorTest
+
+# Build rule for target.
+BankSimulatorTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BankSimulatorTest
+.PHONY : BankSimulatorTest
+
+# fast build rule for target.
+BankSimulatorTest/fast:
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/build
+.PHONY : BankSimulatorTest/fast
+
+#=============================================================================
 # Target rules for targets named BankSimulator
 
 # Build rule for target.
@@ -150,6 +163,33 @@ BankSimulator.cpp.s:
 	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/BankSimulator.cpp.s
 .PHONY : BankSimulator.cpp.s
 
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... BankSimulatorTest"
 	@echo "... BankSimulator"
 	@echo "... BankSimulator.o"
 	@echo "... BankSimulator.i"
 	@echo "... BankSimulator.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

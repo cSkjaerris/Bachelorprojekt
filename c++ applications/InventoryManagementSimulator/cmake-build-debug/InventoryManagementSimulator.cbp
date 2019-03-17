@@ -5,7 +5,7 @@
 		<Option title="InventoryManagementSimulator"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/cmake-build-debug"/>
@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
@@ -66,6 +67,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
@@ -88,6 +90,7 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
@@ -110,6 +113,7 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
@@ -138,6 +142,12 @@
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/InventoryManagementSimulator.h">
 			<Option target="InventoryManagementSimulator"/>
 		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/JNALink.cpp">
+			<Option target="InventoryManagementSimulator"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/JNALink.h">
+			<Option target="InventoryManagementSimulator"/>
+		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/Product.h">
 			<Option target="InventoryManagementSimulator"/>
 		</Unit>
@@ -152,6 +162,9 @@
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/InventoryManagementSimulator/cmake/FindJNALink.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

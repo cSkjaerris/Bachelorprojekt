@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 #include "SimulatorLink.h"
 
@@ -18,5 +19,7 @@ void setSimulatorForNewSimulation(int seed, char* settingsPath);
 double rval(int obs);
 double rvals(char* obs);
 }
+
+void registerSimulator(SimulatorLink* simulator);
 
 #endif

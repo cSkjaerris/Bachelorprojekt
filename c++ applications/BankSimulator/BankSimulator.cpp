@@ -1,11 +1,8 @@
 #include "BankSimulator.h"
 
-BankSimulator::BankSimulator(unsigned int seed, double rateOfCustomers, double rateOfDesk, double closeTime) {
+BankSimulator::BankSimulator(unsigned int seed, string settingsPath) {
     this->seed = seed;
-    this->rateOfCustomers = rateOfCustomers;
-    this->rateOfDesk = rateOfDesk;
-    this->closeTime = closeTime;
-    reset();
+    reset(settingsPath);
 }
 
 void BankSimulator::arrive(){
@@ -50,11 +47,6 @@ void BankSimulator::performWholeSimulation() {
         performOneStepOfSimulation();
 }
 
-void BankSimulator::setSimulatorForNewSimulation(unsigned int seed) {
-    this->seed = seed;
-    reset();
-}
-
 double BankSimulator::rval(int obs) {
     return 0;
 }
@@ -79,7 +71,7 @@ void BankSimulator::scheduleFinish() {
     eventMapping->insert(finish);
 }
 
-void BankSimulator::reset() {
+void BankSimulator::reset(string settingsPath) {
     deskQueue = new queue<Event>();
     eventMapping = new map<double,Event>();
     served = 0;
@@ -88,9 +80,29 @@ void BankSimulator::reset() {
     srand(this->seed);
     pair<double,Event> firstEvent = pair(0,Arrival);
     eventMapping->insert(firstEvent);
+
+    double rateOfCustomers, rateOfDesk, closeTime;
+    fstream settingsFile;
+    settingsFile.open(settingsPath);
+    if(!settingsFile){
+        cerr << "Could not load settings file";
+        exit(1);
+    }
+    settingsFile >> rateOfCustomers;
+    settingsFile >> rateOfDesk;
+    settingsFile >> closeTime;
+    settingsFile.close();
+    this->rateOfCustomers = rateOfCustomers;
+    this->rateOfDesk = rateOfDesk;
+    this->closeTime = closeTime;
 }
 
 double BankSimulator::calculateNextExponential(double rate) {
     double ran = rand()/double(RAND_MAX);
     return (-log(ran))/rate;
+}
+
+void BankSimulator::setSimulatorForNewSimulation(unsigned int seed, string settingsPath) {
+    this->seed = seed;
+    reset(settingsPath);
 }

@@ -6,8 +6,7 @@ public class TestSimulator {
     public static void main(String[] args) {
       //  System.out.println(System.getProperty("java.library.path"));
         System.setProperty("jna.library.path","/Users/casperskjaerris/Documents/cApp");
-        SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/settings.ini",""));
-        System.out.println(System.getProperty("java.library.path"));
+        SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/InvManSetting.cfg",""));
 
         for(int i = 0; i < 2;i++){
             sim.setSimulatorForNewSimulation(123);

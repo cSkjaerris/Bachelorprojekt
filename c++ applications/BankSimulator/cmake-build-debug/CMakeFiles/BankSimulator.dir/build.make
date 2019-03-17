@@ -79,6 +79,7 @@ BankSimulator_EXTERNAL_OBJECTS =
 
 libBankSimulator.dylib: CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o
 libBankSimulator.dylib: CMakeFiles/BankSimulator.dir/build.make
+libBankSimulator.dylib: /Users/casperskjaerris/Documents/cApp/libJNALink.dylib
 libBankSimulator.dylib: CMakeFiles/BankSimulator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libBankSimulator.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BankSimulator.dir/link.txt --verbose=$(VERBOSE)

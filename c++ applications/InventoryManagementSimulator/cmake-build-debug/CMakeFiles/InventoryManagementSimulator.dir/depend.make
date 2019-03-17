@@ -5,4 +5,12 @@ CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o: 
 CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o: ../InventoryManagementSimulator.cpp
 CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o: ../InventoryManagementSimulator.h
 CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o: ../Shop.h
+CMakeFiles/InventoryManagementSimulator.dir/InventoryManagementSimulator.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
+
+CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o: ../Inventory.h
+CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o: ../InventoryManagementSimulator.h
+CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o: ../JNALink.cpp
+CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o: ../JNALink.h
+CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o: ../Shop.h
+CMakeFiles/InventoryManagementSimulator.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
 
