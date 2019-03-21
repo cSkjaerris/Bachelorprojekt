@@ -85,6 +85,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+  "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/FindPackageHandleStandardArgs.cmake"
+  "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/FindPackageMessage.cmake"
+  "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/FindPkgConfig.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/Internal/FeatureTesting.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/Platform/Apple-AppleClang-C.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/Platform/Apple-AppleClang-CXX.cmake"
@@ -102,6 +105,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.13.2/CMakeSystem.cmake"
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
+  "../cmake/FindJNALink.cmake"
   )
 
 # The corresponding makefile is:

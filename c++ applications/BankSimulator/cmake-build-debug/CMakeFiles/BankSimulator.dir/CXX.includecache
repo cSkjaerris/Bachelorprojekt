@@ -24,14 +24,6 @@ fstream
 SimulatorLink.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/SimulatorLink.h
 
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/JNALink.cpp
-JNALink.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/JNALink.h
-
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/JNALink.h
-BankSimulator.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/BankSimulator.h
-
 /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
 iostream
 -

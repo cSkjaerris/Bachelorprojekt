@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/JNALink.dir/JNALink.cpp.o"
   "libJNALink.pdb"
-  "libJNALink.a"
+  "libJNALink.dylib"
 )
 
 # Per-language clean rules from dependency scanning.

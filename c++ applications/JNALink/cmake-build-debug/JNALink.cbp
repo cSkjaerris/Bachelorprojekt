@@ -38,10 +38,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="JNALink">
-				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/JNALink/cmake-build-debug/libJNALink.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/JNALink/cmake-build-debug/libJNALink.dylib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/JNALink/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -60,10 +60,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="JNALink/fast">
-				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/JNALink/cmake-build-debug/libJNALink.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/JNALink/cmake-build-debug/libJNALink.dylib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/JNALink/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>

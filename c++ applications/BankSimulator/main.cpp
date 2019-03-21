@@ -2,8 +2,9 @@
 // Created by Casper Skjærris on 2019-03-14.
 //
 
-#include "BankSimulator.h"
 #include "JNALink.h"
+#include "iostream"
+#include "BankSimulator.h"
 
 using namespace std;
 
@@ -19,7 +20,8 @@ int main() {
     char* served = new char[s.length()+1];
     strcpy(served,s.c_str());
 
-    auto *sim = new BankSimulator(123,settingsPath);
+    //simulator = new BankSimulator(123,settingsPath); //Referencing simulator in JNALink
+
     for (int j = 0; j < 2; j++) {
         setSimulatorForNewSimulation(123,settingsPath);
         for (int i = 0; i < 20; i++) {
@@ -33,7 +35,7 @@ int main() {
                      << getTime() << endl;
             }
             if (i == 15) {
-                cout << "After 15 steps queueSize = " << rvals(queueSize) << " and served is " << rvals(served) << " .Time is "
+                cout << "After 15 steps queueSize = " <<  rvals(queueSize) << " and served is " << rvals(served) << " .Time is "
                      << getTime() << endl;
             }
         }
@@ -64,5 +66,6 @@ int main() {
     cout << "final served is " << rvals(served) << " .Time is " << getTime() << endl;
     double test = rvals(queueSize);
     cout << "just checking queue size is " << test << endl;
+
 
 }

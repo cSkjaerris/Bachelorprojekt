@@ -2,6 +2,7 @@ package inventoryManagementTesting;
 
 import com.sun.jna.Native;
 import vesta.mc.ParametersForState;
+//import mockupIntegration.*;
 
 public class TestInventory {
     public static void main(String[] args) {

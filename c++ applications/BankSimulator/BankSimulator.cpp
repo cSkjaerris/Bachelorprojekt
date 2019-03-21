@@ -1,8 +1,8 @@
 #include "BankSimulator.h"
 
 BankSimulator::BankSimulator(unsigned int seed, string settingsPath) {
-    this->seed = seed;
-    reset(settingsPath);
+    randomDist = uniform_real_distribution(0.0,1.0);
+    reset(seed,settingsPath);
 }
 
 void BankSimulator::arrive(){
@@ -31,7 +31,7 @@ double BankSimulator::getTime() {
     return simulationTime;
 }
 
-void BankSimulator::performOneStepOfSimulation() {
+void BankSimulator::performSimulationStep() {
     auto pair = eventMapping->begin();
     simulationTime = pair->first;
     if(pair->second == Arrival){
@@ -42,9 +42,17 @@ void BankSimulator::performOneStepOfSimulation() {
     eventMapping->erase(simulationTime);
 }
 
-void BankSimulator::performWholeSimulation() {
+void BankSimulator::performSimulation() {
     while(!eventMapping->empty())
-        performOneStepOfSimulation();
+        performSimulationStep();
+}
+
+void BankSimulator::performOneStepOfSimulation() {
+    performSimulationStep();
+}
+
+void BankSimulator::performWholeSimulation() {
+    performSimulation();
 }
 
 double BankSimulator::rval(int obs) {
@@ -71,13 +79,14 @@ void BankSimulator::scheduleFinish() {
     eventMapping->insert(finish);
 }
 
-void BankSimulator::reset(string settingsPath) {
+void BankSimulator::reset(unsigned int seed, string settingsPath) {
     deskQueue = new queue<Event>();
     eventMapping = new map<double,Event>();
     served = 0;
     simulationTime = 0;
     isDeskAvailable = true;
-    srand(this->seed);
+    this->seed = seed;
+    generator = default_random_engine(seed);
     pair<double,Event> firstEvent = pair(0,Arrival);
     eventMapping->insert(firstEvent);
 
@@ -98,11 +107,10 @@ void BankSimulator::reset(string settingsPath) {
 }
 
 double BankSimulator::calculateNextExponential(double rate) {
-    double ran = rand()/double(RAND_MAX);
+    double ran = randomDist(generator);
     return (-log(ran))/rate;
 }
 
 void BankSimulator::setSimulatorForNewSimulation(unsigned int seed, string settingsPath) {
-    this->seed = seed;
-    reset(settingsPath);
+    reset(seed, settingsPath);
 }

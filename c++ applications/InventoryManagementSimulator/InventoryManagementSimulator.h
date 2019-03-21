@@ -8,7 +8,7 @@
 #include <iostream>
 
 #include "Shop.h"
-//#include "SimulatorLink.h"
+#include "SimulatorLink.h"
 
 using namespace std;
 enum Event{
@@ -21,7 +21,7 @@ enum Event{
     PaymentForDelivery
 };
 
-class InventoryManagementSimulator {//: public SimulatorLink{
+class InventoryManagementSimulator : public SimulatorLink{
 private:
     int simulationTime;
     int endSimulation;
@@ -38,9 +38,9 @@ private:
     void sendDeliveryRequest(int orderSize);
     void dailyDemand();
     void delivery();
-    void reset(int endTime, unsigned int targetInventory, unsigned int reorderPoint);
+    void reset(unsigned int seed, string settingsPath);
 public:
-    InventoryManagementSimulator();
+    InventoryManagementSimulator(unsigned int seed, string settingsPath);
     ~InventoryManagementSimulator() = default;
     void performSimulationStep();
     void completeSimulation();
@@ -49,12 +49,12 @@ public:
     int getSoldProducts() const;
 
     int getLostSales() const;
-    double getTime(); //override;
-    void performOneStepOfSimulation(); //override;
-    void performWholeSimulation(); //override;
-    void setSimulatorForNewSimulation(unsigned int seed, string settingsPath);// override;
-    double rval(int obs);// override;
-    double rval(string obs);// override;
+    double getTime() override;
+    void performOneStepOfSimulation() override;
+    void performWholeSimulation() override;
+    void setSimulatorForNewSimulation(unsigned int seed, string settingsPath)  override;
+    double rval(int obs)  override;
+    double rval(string obs)  override;
 
 };
 

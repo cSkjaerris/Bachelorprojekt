@@ -24,10 +24,11 @@ private:
     double rateOfDesk;
     double closeTime;
     bool isDeskAvailable;
+    default_random_engine generator;
+    uniform_real_distribution<double> randomDist;
     unsigned int served;
     map<double,Event>* eventMapping;
     queue<Event>* deskQueue;
-    void reset(string settingsPath);
     void arrive();
     void finish();
     void scheduleNextArrival();
@@ -37,6 +38,9 @@ public:
     BankSimulator(unsigned int seed, string settingsPath);
     ~BankSimulator() = default;
     double getTime() override;
+    void performSimulationStep();
+    void performSimulation();
+    void reset(unsigned int seed, string settingsPath);
     void performOneStepOfSimulation() override;
     void performWholeSimulation() override;
     void setSimulatorForNewSimulation(unsigned int seed, string settingsPath) override;

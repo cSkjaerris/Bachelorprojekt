@@ -1,25 +1,22 @@
 #ifndef JNALINK_LIBRARY_H
 #define JNALINK_LIBRARY_H
 
-#include <iostream>
-#include <fstream>
 #include <vector>
+#include <iostream>
 
 #include "SimulatorLink.h"
-
-using namespace std;
 
 SimulatorLink* simulator;
 
 extern "C"{
-double getTime();
-void performOneStepOfSimulation();
-void performWholeSimulation();
-void setSimulatorForNewSimulation(int seed, char* settingsPath);
-double rval(int obs);
-double rvals(char* obs);
+inline double getTime(){return simulator->getTime();}
+inline void performOneStepOfSimulation(){simulator->performOneStepOfSimulation();}
+inline void performWholeSimulation(){simulator->performWholeSimulation();}
+inline void setSimulatorForNewSimulation(int seed, char* settingsPath){simulator->setSimulatorForNewSimulation(seed,string(settingsPath));}
+inline double rval(int obs){return simulator->rval(obs);}
+inline double rvals(char* obs) {return simulator->rval(string(obs));}
 }
 
-void registerSimulator(SimulatorLink* simulator);
+inline void registerSimulator(SimulatorLink* sim){simulator = sim;}
 
 #endif

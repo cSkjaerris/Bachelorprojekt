@@ -5,8 +5,6 @@
 #ifndef JNALINK_SIMULATORLINK_H
 #define JNALINK_SIMULATORLINK_H
 
-#include <iostream>
-
 using namespace std;
 
 class SimulatorLink{

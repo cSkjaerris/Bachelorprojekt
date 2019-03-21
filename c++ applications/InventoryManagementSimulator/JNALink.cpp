@@ -18,7 +18,7 @@ void performWholeSimulation() {
 
 void setSimulatorForNewSimulation(int seed, char *settingsPath) {
     delete simulator;
-    simulator = new InventoryManagementSimulator();
+    simulator = new InventoryManagementSimulator(seed, settingsPath);
     simulator->setSimulatorForNewSimulation(seed,string(settingsPath));
 }
 

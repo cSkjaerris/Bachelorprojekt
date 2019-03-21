@@ -1,10 +1,10 @@
 #include "InventoryManagementSimulator.h"
 
-InventoryManagementSimulator::InventoryManagementSimulator(){
+InventoryManagementSimulator::InventoryManagementSimulator(unsigned int seed, string settingsPath){
     daysForResplenishingDistribution = uniform_int_distribution(1,3);
     sampleQuantityDistribution = uniform_int_distribution(5,10);
-    seed = 9876543;
-    reset(365,25,5);
+    this->seed = seed;
+    reset(seed,settingsPath);
 }
 
 void InventoryManagementSimulator::dailyDemand() {
@@ -107,19 +107,7 @@ void InventoryManagementSimulator::performWholeSimulation() {
 }
 void InventoryManagementSimulator::setSimulatorForNewSimulation(unsigned int seed, string settingsPath) {
     this->seed = seed;
-    fstream settingsFile;
-    settingsFile.open(settingsPath);
-    if(!settingsFile){
-        cerr << "Could not load settings file";
-        exit(1);
-    }
-
-    int endTime, targetInv, reorderPoint;
-    settingsFile >> endTime;
-    settingsFile >> targetInv;
-    settingsFile >> reorderPoint;
-    settingsFile.close();
-    reset(endTime,targetInv,reorderPoint);
+    reset(seed, settingsPath);
 
 }
 double InventoryManagementSimulator::rval(int obs){
@@ -138,8 +126,20 @@ double InventoryManagementSimulator::rval(string obs){
     return -1;
 }
 
-void InventoryManagementSimulator::reset(int endTime, unsigned int targetInventory, unsigned int reorderPoint){
-    generator = generator = default_random_engine(seed);
+void InventoryManagementSimulator::reset(unsigned int seed, string settingsPath ){
+    fstream settingsFile;
+    settingsFile.open(settingsPath);
+    if(!settingsFile){
+        cerr << "Could not load settings file";
+        exit(1);
+    }
+
+    int endTime, targetInv, reorderPoint;
+    settingsFile >> endTime;
+    settingsFile >> targetInv;
+    settingsFile >> reorderPoint;
+    settingsFile.close();
+    generator =  default_random_engine(seed);
     simulationTime = 0;
     endSimulation = endTime;
     delete deliveryQuantity;
@@ -150,7 +150,7 @@ void InventoryManagementSimulator::reset(int endTime, unsigned int targetInvento
     lostSales = 0;
     singleProductShop = new Shop();
     singleProductShop->inventory = new Inventory();
-    singleProductShop->inventory->targetInventory = targetInventory;
+    singleProductShop->inventory->targetInventory = targetInv;
     singleProductShop->inventory->reorderPoint = reorderPoint;
 
 

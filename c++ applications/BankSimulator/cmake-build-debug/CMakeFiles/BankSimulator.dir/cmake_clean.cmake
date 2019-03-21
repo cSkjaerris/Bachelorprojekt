@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o"
-  "CMakeFiles/BankSimulator.dir/JNALink.cpp.o"
   "libBankSimulator.pdb"
   "libBankSimulator.dylib"
 )

@@ -163,33 +163,6 @@ BankSimulator.cpp.s:
 	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/BankSimulator.cpp.s
 .PHONY : BankSimulator.cpp.s
 
-JNALink.o: JNALink.cpp.o
-
-.PHONY : JNALink.o
-
-# target to build an object file
-JNALink.cpp.o:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/JNALink.cpp.o
-.PHONY : JNALink.cpp.o
-
-JNALink.i: JNALink.cpp.i
-
-.PHONY : JNALink.i
-
-# target to preprocess a source file
-JNALink.cpp.i:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/JNALink.cpp.i
-.PHONY : JNALink.cpp.i
-
-JNALink.s: JNALink.cpp.s
-
-.PHONY : JNALink.s
-
-# target to generate assembly for a file
-JNALink.cpp.s:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/JNALink.cpp.s
-.PHONY : JNALink.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -230,9 +203,6 @@ help:
 	@echo "... BankSimulator.o"
 	@echo "... BankSimulator.i"
 	@echo "... BankSimulator.s"
-	@echo "... JNALink.o"
-	@echo "... JNALink.i"
-	@echo "... JNALink.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

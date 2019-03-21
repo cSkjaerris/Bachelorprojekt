@@ -136,9 +136,6 @@
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/BankSimulator.h">
 			<Option target="BankSimulator"/>
 		</Unit>
-		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/JNALink.cpp">
-			<Option target="BankSimulator"/>
-		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/JNALink.h">
 			<Option target="BankSimulator"/>
 		</Unit>
