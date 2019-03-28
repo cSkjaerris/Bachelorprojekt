@@ -5,3 +5,8 @@ CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o: ../BankSimulator.cpp
 CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o: ../BankSimulator.h
 CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
 
+CMakeFiles/BankSimulator.dir/JNALink.cpp.o: ../BankSimulator.h
+CMakeFiles/BankSimulator.dir/JNALink.cpp.o: ../JNALink.cpp
+CMakeFiles/BankSimulator.dir/JNALink.cpp.o: ../JNALink.h
+CMakeFiles/BankSimulator.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
+

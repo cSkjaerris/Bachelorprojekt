@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator"
+CMAKE_SOURCE_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles" "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/BankSimulator/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,57 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BankSimulatorTest
+# Target rules for targets named .create
 
 # Build rule for target.
-BankSimulatorTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BankSimulatorTest
-.PHONY : BankSimulatorTest
+.create: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 .create
+.PHONY : .create
 
 # fast build rule for target.
-BankSimulatorTest/fast:
-	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/build
-.PHONY : BankSimulatorTest/fast
+.create/fast:
+	$(MAKE) -f CMakeFiles/.create.dir/build.make CMakeFiles/.create.dir/build
+.PHONY : .create/fast
 
 #=============================================================================
-# Target rules for targets named BankSimulator
+# Target rules for targets named SpikeWrapper
 
 # Build rule for target.
-BankSimulator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BankSimulator
-.PHONY : BankSimulator
+SpikeWrapper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SpikeWrapper
+.PHONY : SpikeWrapper
 
 # fast build rule for target.
-BankSimulator/fast:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/build
-.PHONY : BankSimulator/fast
-
-BankSimulator.o: BankSimulator.cpp.o
-
-.PHONY : BankSimulator.o
-
-# target to build an object file
-BankSimulator.cpp.o:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/BankSimulator.cpp.o
-.PHONY : BankSimulator.cpp.o
-
-BankSimulator.i: BankSimulator.cpp.i
-
-.PHONY : BankSimulator.i
-
-# target to preprocess a source file
-BankSimulator.cpp.i:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/BankSimulator.cpp.i
-.PHONY : BankSimulator.cpp.i
-
-BankSimulator.s: BankSimulator.cpp.s
-
-.PHONY : BankSimulator.s
-
-# target to generate assembly for a file
-BankSimulator.cpp.s:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/BankSimulator.cpp.s
-.PHONY : BankSimulator.cpp.s
+SpikeWrapper/fast:
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/build
+.PHONY : SpikeWrapper/fast
 
 JNALink.o: JNALink.cpp.o
 
@@ -169,7 +142,7 @@ JNALink.o: JNALink.cpp.o
 
 # target to build an object file
 JNALink.cpp.o:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/JNALink.cpp.o
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/JNALink.cpp.o
 .PHONY : JNALink.cpp.o
 
 JNALink.i: JNALink.cpp.i
@@ -178,7 +151,7 @@ JNALink.i: JNALink.cpp.i
 
 # target to preprocess a source file
 JNALink.cpp.i:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/JNALink.cpp.i
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/JNALink.cpp.i
 .PHONY : JNALink.cpp.i
 
 JNALink.s: JNALink.cpp.s
@@ -187,35 +160,35 @@ JNALink.s: JNALink.cpp.s
 
 # target to generate assembly for a file
 JNALink.cpp.s:
-	$(MAKE) -f CMakeFiles/BankSimulator.dir/build.make CMakeFiles/BankSimulator.dir/JNALink.cpp.s
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/JNALink.cpp.s
 .PHONY : JNALink.cpp.s
 
-main.o: main.cpp.o
+SpikeWrapper.o: SpikeWrapper.cpp.o
 
-.PHONY : main.o
+.PHONY : SpikeWrapper.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/main.cpp.o
-.PHONY : main.cpp.o
+SpikeWrapper.cpp.o:
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/SpikeWrapper.cpp.o
+.PHONY : SpikeWrapper.cpp.o
 
-main.i: main.cpp.i
+SpikeWrapper.i: SpikeWrapper.cpp.i
 
-.PHONY : main.i
+.PHONY : SpikeWrapper.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/main.cpp.i
-.PHONY : main.cpp.i
+SpikeWrapper.cpp.i:
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/SpikeWrapper.cpp.i
+.PHONY : SpikeWrapper.cpp.i
 
-main.s: main.cpp.s
+SpikeWrapper.s: SpikeWrapper.cpp.s
 
-.PHONY : main.s
+.PHONY : SpikeWrapper.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/BankSimulatorTest.dir/build.make CMakeFiles/BankSimulatorTest.dir/main.cpp.s
-.PHONY : main.cpp.s
+SpikeWrapper.cpp.s:
+	$(MAKE) -f CMakeFiles/SpikeWrapper.dir/build.make CMakeFiles/SpikeWrapper.dir/SpikeWrapper.cpp.s
+.PHONY : SpikeWrapper.cpp.s
 
 # Help Target
 help:
@@ -225,17 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... BankSimulatorTest"
-	@echo "... BankSimulator"
-	@echo "... BankSimulator.o"
-	@echo "... BankSimulator.i"
-	@echo "... BankSimulator.s"
+	@echo "... .create"
+	@echo "... SpikeWrapper"
 	@echo "... JNALink.o"
 	@echo "... JNALink.i"
 	@echo "... JNALink.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... SpikeWrapper.o"
+	@echo "... SpikeWrapper.i"
+	@echo "... SpikeWrapper.s"
 .PHONY : help
 
 

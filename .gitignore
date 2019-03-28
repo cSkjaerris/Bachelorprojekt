@@ -46,3 +46,5 @@ libspsim\.zip
 libspsim/
 
 *.log
+
+c\+\+ applications/Spike/\.idea/

@@ -1,11 +1,12 @@
-#ifndef JNALINK_LIBRARY_H
-#define JNALINK_LIBRARY_H
+//
+// Created by Casper Skjærris on 2019-03-21.
+//
 
-#include <vector>
-#include <iostream>
+#ifndef SPIKE_JNALINK_H
+#define SPIKE_JNALINK_H
 
 #include "SimulatorLink.h"
-#include "BankSimulator.h"
+#include "SpikeWrapper.h"
 
 SimulatorLink* simulator;
 
@@ -18,4 +19,5 @@ double rval(int obs);
 double rvals(char* obs);
 }
 
-#endif
+
+#endif //SPIKE_JNALINK_H
