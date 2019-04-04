@@ -19,7 +19,7 @@ void performWholeSimulation() {
 void setSimulatorForNewSimulation(int seed, char *settingsPath) {
     delete simulator;
     simulator = new InventoryManagementSimulator(seed, settingsPath);
-    simulator->setSimulatorForNewSimulation(seed,string(settingsPath));
+    //simulator->setSimulatorForNewSimulation(seed,string(settingsPath));
 }
 
 double rval(int obs) {

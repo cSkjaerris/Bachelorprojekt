@@ -2,35 +2,36 @@ package inventoryManagementTesting;
 
 import com.sun.jna.Native;
 import vesta.mc.ParametersForState;
-//import mockupIntegration.*;
 
 public class TestInventory {
+    @SuppressWarnings("Duplicates")
     public static void main(String[] args) {
         Native.setProtected(true);
         System.setProperty("jna.library.path","/Users/casperskjaerris/Documents/cApp");
         SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/InvManSetting.cfg",""));
 
         for(int i = 0; i < 2;i++){
-            sim.setSimulatorForNewSimulation(123);
-            for(int j = 0; j<51;j++){
-                if(j%5 == 0) {
-                    System.out.println(String.format("Run %d steps. Queue size is: %f, amount served: %f and time is: %f",j,sim.rval("queueSize"),sim.rval("served"),sim.getTime()));
+            sim.setSimulatorForNewSimulation(9876543);
+            for(int j = 0; j<151;j++){
+                if(j%25 == 0) {
+                    System.out.println(String.format("Run %d steps. Products sold = %f, lost sales are = %f and we had %f restockings",j,sim.rval("soldProducts"),sim.rval("lostSales"),sim.rval("numberOfRestocking")));
                 }
                 sim.performOneStepOfSimulation();
             }
             System.out.println("Testing with same seed");
         }
-        sim.setSimulatorForNewSimulation(9876543);
-        for(int j = 0; j<51;j++){
-            if(j%5 == 0) {
-                System.out.println(String.format("Run %d steps. Queue size is: %f, amount served: %f and time is: %f",j,sim.rval("queueSize"),sim.rval("served"),sim.getTime()));
+        System.out.println("Testing new seed");
+        sim.setSimulatorForNewSimulation(324325);
+        for(int j = 0; j<151;j++){
+            if(j%25 == 0) {
+                System.out.println(String.format("Run %d steps. Products sold = %f, lost sales are = %f and we had %f restockings",j,sim.rval("soldProducts"),sim.rval("lostSales"),sim.rval("numberOfRestocking")));
             }
             sim.performOneStepOfSimulation();
         }
         System.out.println("Now testing whole simulation");
         sim.setSimulatorForNewSimulation(75484356);
         sim.performWholeSimulation();
-        System.out.println(String.format("Final served: %f. Time is now: %f",sim.rval("served"),sim.getTime()));
-        System.out.println(String.format("Just making sure queue size is %f",sim.rval("queueSize")));
+        System.out.println(String.format("Final sales: %f. total lost sales: %f and we had %f restockings",sim.rval("soldProducts"),sim.rval("lostSales"),sim.rval("numberOfRestocking")));
+        System.out.println(String.format("Just making sure time is now: %f",sim.getTime()));
     }
 }

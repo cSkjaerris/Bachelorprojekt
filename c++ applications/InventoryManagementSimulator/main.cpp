@@ -49,4 +49,9 @@ int main(){
         performOneStepOfSimulation();
     }
 
+    cout << "Testing complete simulation" << endl;
+    setSimulatorForNewSimulation(75484356, settingsPath);
+    performWholeSimulation();
+    cout << "Just making sure time is now: " << getTime() << endl;
+
 }

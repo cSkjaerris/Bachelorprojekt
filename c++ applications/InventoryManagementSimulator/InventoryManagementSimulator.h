@@ -31,7 +31,7 @@ private:
     uniform_int_distribution<int> sampleQuantityDistribution;
     Shop* singleProductShop;
     map<int,vector<Event>>* eventMapping;
-    map<int,int>* deliveryQuantity;
+    map<int,int>* deliveryMap;
     int numberOfRestocking;
     int soldProducts;
     int lostSales;

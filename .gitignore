@@ -48,3 +48,6 @@ libspsim/
 *.log
 
 c\+\+ applications/Spike/\.idea/
+
+argos3-master\.zip
+argos3/*

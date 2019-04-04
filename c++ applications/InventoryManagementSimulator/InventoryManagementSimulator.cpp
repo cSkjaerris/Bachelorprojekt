@@ -1,49 +1,62 @@
 #include "InventoryManagementSimulator.h"
 
 InventoryManagementSimulator::InventoryManagementSimulator(unsigned int seed, string settingsPath){
-    daysForResplenishingDistribution = uniform_int_distribution(1,3);
-    sampleQuantityDistribution = uniform_int_distribution(5,10);
+
+    deliveryMap = new map<int,int>();
+    eventMapping = new map<int,vector<Event>>();
+    singleProductShop = new Shop();
+    singleProductShop->inventory = new Inventory();
     this->seed = seed;
+
     reset(seed,settingsPath);
 }
 
 void InventoryManagementSimulator::dailyDemand() {
-    auto demand = sampleQuantityDistribution(generator);
+    auto demand = sampleQuantityDistribution(generator); //Get random demand for the day
+    //If product in stock is greater than demand of the day, sell the products
     if (singleProductShop->inventory->productInStock >= demand){
+        //If product in stock will be lower than the reorder point, place an order to get target inventory
         if(singleProductShop->inventory->productInStock - demand < singleProductShop->inventory->reorderPoint &&
             singleProductShop->inventory->productInStock > singleProductShop->inventory->reorderPoint){
-            int orderQuantity = singleProductShop->inventory->targetInventory - singleProductShop->inventory->productInStock - demand;
+            int orderQuantity = singleProductShop->inventory->targetInventory -
+                    singleProductShop->inventory->productInStock - demand;
             sendDeliveryRequest(orderQuantity);
         }
         singleProductShop->inventory->productInStock -= demand;
         soldProducts +=demand;
     } else {
+        // If not enough product for the demand, lost sales is increased by the difference of stock and demand
+        // and stock is set to 0
         lostSales += demand - singleProductShop->inventory->productInStock;
         singleProductShop->inventory->productInStock = 0;
-        if(deliveryQuantity->empty()){
+        //If no deliveries has been scheduled, place an order on the target inventory
+        if(deliveryMap->empty()){
             sendDeliveryRequest(singleProductShop->inventory->targetInventory);
         }
     }
-    auto vectorOnTomorrowEntry = eventMapping->find(simulationTime+1);
-    vector<Event>* vectorOnTomorrow;
-    if(vectorOnTomorrowEntry != eventMapping->end()){
-        vectorOnTomorrow = &vectorOnTomorrowEntry->second;
-    } else{
-        vectorOnTomorrow = new vector<Event>();
+    //Place a daily demand schedule for tomorrow, if it's not the last day of the simulation
+    if(simulationTime < endSimulation) {
+        auto vectorOnTomorrowEntry = eventMapping->find(simulationTime + 1);
+        vector<Event> *vectorOnTomorrow;
+        if (vectorOnTomorrowEntry != eventMapping->end()) {
+            vectorOnTomorrow = &vectorOnTomorrowEntry->second;
+        } else {
+            vectorOnTomorrow = new vector<Event>();
+        }
+        vectorOnTomorrow->push_back(DailyDemand);
+        eventMapping->insert(pair(simulationTime + 1, *vectorOnTomorrow));
     }
-    vectorOnTomorrow->push_back(DailyDemand);
-    eventMapping->insert(pair(simulationTime+1,*vectorOnTomorrow));
 }
 
 void InventoryManagementSimulator::delivery() {
-    int delivery = deliveryQuantity->at(simulationTime);
+    int delivery = deliveryMap->at(simulationTime);
     singleProductShop->inventory->productInStock += delivery;
-    deliveryQuantity->erase(simulationTime);
+    deliveryMap->erase(simulationTime);
     numberOfRestocking++;
 }
 
 void InventoryManagementSimulator::performSimulationStep() {
-    if(simulationTime <= endSimulation){
+    if(simulationTime <= endSimulation && !eventMapping->empty()){
         auto events = eventMapping->begin();
         simulationTime = events->first;
         for (auto event : events->second){
@@ -59,7 +72,7 @@ void InventoryManagementSimulator::performSimulationStep() {
 }
 
 void InventoryManagementSimulator::completeSimulation() {
-    while(simulationTime <= endSimulation)
+    while(simulationTime <= endSimulation && !eventMapping->empty())
         performSimulationStep();
 
 }
@@ -78,22 +91,24 @@ int InventoryManagementSimulator::getLostSales() const {
 
 void InventoryManagementSimulator::sendDeliveryRequest(int orderSize) {
     auto shipmentDay = daysForResplenishingDistribution(generator) + simulationTime;
-    auto vectorOnShipmentDayEntry = eventMapping->find(shipmentDay);
-    vector<Event>* vectorOnShipmentDay;
-    if(vectorOnShipmentDayEntry != eventMapping->end()) {
-        vectorOnShipmentDay = &vectorOnShipmentDayEntry->second;
-    } else{
-        vectorOnShipmentDay = new vector<Event>();
+    if (shipmentDay <= endSimulation) {
+        auto vectorOnShipmentDayEntry = eventMapping->find(shipmentDay);
+        vector<Event> *vectorOnShipmentDay;
+        if (vectorOnShipmentDayEntry != eventMapping->end()) {
+            vectorOnShipmentDay = &vectorOnShipmentDayEntry->second;
+        } else {
+            vectorOnShipmentDay = new vector<Event>();
+        }
+        vectorOnShipmentDay->insert(vectorOnShipmentDay->begin(), Delivery);
+        eventMapping->insert(pair(shipmentDay, *vectorOnShipmentDay));
+        int currentDeliveryQuantity = 0;
+        auto currentDeliveryQuantityEntry = deliveryMap->find(shipmentDay);
+        if (currentDeliveryQuantityEntry != deliveryMap->end()) {
+            currentDeliveryQuantity = currentDeliveryQuantityEntry->second;
+        }
+        orderSize += currentDeliveryQuantity;
+        deliveryMap->insert(pair(shipmentDay, orderSize));
     }
-    vectorOnShipmentDay->insert(vectorOnShipmentDay->begin(), Delivery);
-    eventMapping->insert(pair(shipmentDay, *vectorOnShipmentDay));
-    int currentDeliveryQuantity = 0;
-    auto currentDeliveryQuantityEntry = deliveryQuantity->find(shipmentDay);
-    if (currentDeliveryQuantityEntry != deliveryQuantity->end()){
-        currentDeliveryQuantity = currentDeliveryQuantityEntry->second;
-    }
-    orderSize +=currentDeliveryQuantity;
-    deliveryQuantity->insert(pair(shipmentDay,orderSize));
 }
 
 double InventoryManagementSimulator::getTime(){
@@ -134,31 +149,33 @@ void InventoryManagementSimulator::reset(unsigned int seed, string settingsPath 
         exit(1);
     }
 
-    int endTime, targetInv, reorderPoint;
+    int endTime, targetInv, reorderPoint, orderMinTime, orderMaxTime, dailyDemandMin, dailyDemandMax;
     settingsFile >> endTime;
     settingsFile >> targetInv;
     settingsFile >> reorderPoint;
+    settingsFile >> orderMinTime;
+    settingsFile >> orderMaxTime;
+    settingsFile >> dailyDemandMin;
+    settingsFile >> dailyDemandMax;
     settingsFile.close();
+
+    daysForResplenishingDistribution = uniform_int_distribution(orderMinTime,orderMaxTime);
+    sampleQuantityDistribution = uniform_int_distribution(dailyDemandMin,dailyDemandMax);
     generator =  default_random_engine(seed);
     simulationTime = 0;
     endSimulation = endTime;
-    delete deliveryQuantity;
-    deliveryQuantity = new map<int,int>();
-    delete singleProductShop;
+    deliveryMap->clear();
+
     numberOfRestocking = 0;
     soldProducts = 0;
     lostSales = 0;
-    singleProductShop = new Shop();
-    singleProductShop->inventory = new Inventory();
     singleProductShop->inventory->targetInventory = targetInv;
     singleProductShop->inventory->reorderPoint = reorderPoint;
 
 
     auto initialStock = uniform_int_distribution(singleProductShop->inventory->reorderPoint,singleProductShop->inventory->targetInventory);
     singleProductShop->inventory->productInStock = initialStock(generator);
-
-    delete eventMapping;
-    eventMapping = new map<int,vector<Event>>();
+    eventMapping->clear();
 
     auto firstDailyDemand = new vector<Event>();
     firstDailyDemand->insert(firstDailyDemand->begin(),DailyDemand);
