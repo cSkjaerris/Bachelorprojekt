@@ -95,6 +95,7 @@ libSpikeWrapper.dylib: CMakeFiles/SpikeWrapper.dir/SpikeWrapper.cpp.o
 libSpikeWrapper.dylib: CMakeFiles/SpikeWrapper.dir/JNALink.cpp.o
 libSpikeWrapper.dylib: CMakeFiles/SpikeWrapper.dir/build.make
 libSpikeWrapper.dylib: /Users/casperskjaerris/Documents/cApp/JNALink/lib/libJNALink.a
+libSpikeWrapper.dylib: /Users/casperskjaerris/Documents/cApp/Spike/lib/libspsim_sr.a
 libSpikeWrapper.dylib: CMakeFiles/SpikeWrapper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libSpikeWrapper.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SpikeWrapper.dir/link.txt --verbose=$(VERBOSE)

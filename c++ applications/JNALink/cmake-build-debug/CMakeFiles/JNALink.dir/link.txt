@@ -1,1 +1,2 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -g -dynamiclib -Wl,-headerpad_max_install_names  -o libJNALink.dylib -install_name @rpath/libJNALink.dylib CMakeFiles/JNALink.dir/JNALink.cpp.o 
+/Library/Developer/CommandLineTools/usr/bin/ar qc libJNALink.a  CMakeFiles/JNALink.dir/JNALink.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libJNALink.a

@@ -38,26 +38,6 @@ add_library(SpikeWrapper SHARED SpikeWrapper.cpp SpikeWrapper.h JNALink.cpp JNAL
 find_package(Spike REQUIRED)
 include_directories(${Spike_INCLUDEDIR})
 
-add_custom_command(
-        OUTPUT
-            ${Spike}
-
-        COOMMAND
-            libtool --model=link gcc -static -o ${SpikeWrapper} OBJECT ${Spike_INCLUDEDIR}
-
-        COMMENT
-            "Merging ${SpikeWrapper} with Spike"
-
-        DEPENDS
-            OBJECT
-)
-
-add_custom_target(${SpikeWrapper}.create
-        ALL
-        DEPENDS
-            ${SpikeWrapper}
-        )
-
 include(FindPkgConfig)
 find_package(JNALink REQUIRED)
 include_directories(${JNALink_INCLUDEDIR})
@@ -66,4 +46,4 @@ include_directories(${JNALink_INCLUDEDIR})
 
 
 target_link_libraries(${PROJECT_NAME} ${JNALink_LIBRARY})
-#target_link_libraries(${PROJECT_NAME} ${Spike_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${Spike_LIBRARY})

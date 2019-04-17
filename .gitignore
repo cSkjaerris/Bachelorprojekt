@@ -51,3 +51,11 @@ c\+\+ applications/Spike/\.idea/
 
 argos3-master\.zip
 argos3/*
+
+c\+\+ applications/argosFromBinary/\.idea/
+
+spsim-dssdutil\.zip
+
+spsim-dssdutil/libdssd_util\.a
+
+spsim-dssdutil/libspsim_sr\.a

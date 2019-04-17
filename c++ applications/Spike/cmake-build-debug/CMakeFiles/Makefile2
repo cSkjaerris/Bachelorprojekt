@@ -65,43 +65,6 @@ CMAKE_SOURCE_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorpro
 CMAKE_BINARY_DIR = "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug"
 
 #=============================================================================
-# Target rules for target CMakeFiles/.create.dir
-
-# All Build rule for target.
-CMakeFiles/.create.dir/all:
-	$(MAKE) -f CMakeFiles/.create.dir/build.make CMakeFiles/.create.dir/depend
-	$(MAKE) -f CMakeFiles/.create.dir/build.make CMakeFiles/.create.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles" --progress-num= "Built target .create"
-.PHONY : CMakeFiles/.create.dir/all
-
-# Include target in all.
-all: CMakeFiles/.create.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/.create.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles" 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/.create.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/.create.dir/rule
-
-# Convenience name for target.
-.create: CMakeFiles/.create.dir/rule
-
-.PHONY : .create
-
-# clean rule for target.
-CMakeFiles/.create.dir/clean:
-	$(MAKE) -f CMakeFiles/.create.dir/build.make CMakeFiles/.create.dir/clean
-.PHONY : CMakeFiles/.create.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/.create.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/SpikeWrapper.dir
 
 # All Build rule for target.

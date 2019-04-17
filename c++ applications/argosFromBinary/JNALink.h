@@ -5,9 +5,23 @@
 #ifndef ARGOSFROMBINARY_JNALINK_H
 #define ARGOSFROMBINARY_JNALINK_H
 
+#include "ArgosSimulatorWrapper.h"
 
-class JNALink {
+SimulatorLink* simulator;
+bool isSimulatorSetUp = false;
 
+extern "C" {
+double getTime();
+
+void performOneStepOfSimulation();
+
+void performWholeSimulation();
+
+void setSimulatorForNewSimulation(unsigned int seed, char* settingsPath);
+
+double rval(int obs);
+
+double rvals(char* obs);
 };
 
 

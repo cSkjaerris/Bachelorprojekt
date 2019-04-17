@@ -37,16 +37,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Spike/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title=".create">
-				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Spike/cmake-build-debug/Makefile&quot;  VERBOSE=1 .create"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Spike/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Spike/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/Spike/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="SpikeWrapper">
 				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug/libSpikeWrapper.dylib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/Spike/cmake-build-debug"/>
@@ -64,6 +54,7 @@
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -91,6 +82,7 @@
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>

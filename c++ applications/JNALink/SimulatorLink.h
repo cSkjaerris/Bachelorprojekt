@@ -7,9 +7,11 @@
 
 using namespace std;
 
+#include <iostream>
+
 class SimulatorLink{
 public:
-    ~SimulatorLink() = default;
+    virtual ~SimulatorLink() = default;
     virtual double getTime() = 0;
     virtual void performOneStepOfSimulation() = 0;
     virtual void performWholeSimulation() = 0;

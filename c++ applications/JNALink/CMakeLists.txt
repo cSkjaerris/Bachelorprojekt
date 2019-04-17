@@ -3,4 +3,4 @@ project(JNALink)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(JNALink SHARED JNALink.h SimulatorLink.h JNALink.cpp)
+add_library(JNALink JNALink.h SimulatorLink.h JNALink.cpp)
