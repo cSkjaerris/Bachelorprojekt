@@ -1,4 +1,4 @@
-package inventoryManagementTesting;
+package inventoryManagement;
 
 import vesta.mc.NewState;
 import vesta.mc.ParametersForState;
@@ -37,7 +37,7 @@ public class SimulatorState extends NewState {
         obs = obs.trim();
         if(obs.equalsIgnoreCase(DEFAULTOBSERVATIONS.STEPS.toString())){
             return (double)this.getNumberOfSteps();
-        } else if (obs.equalsIgnoreCase("time")){
+        } else if (obs.equalsIgnoreCase(DEFAULTOBSERVATIONS.TIME.toString())){
             return getTime();
         }
         return JNALink.INSTANCE.rvals(obs);

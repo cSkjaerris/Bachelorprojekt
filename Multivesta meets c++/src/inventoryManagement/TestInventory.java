@@ -1,12 +1,14 @@
-package inventoryManagementTesting;
+package inventoryManagement;
 
 import com.sun.jna.Native;
 import vesta.mc.ParametersForState;
+import vesta.quatex.DEFAULTOBSERVATIONS;
+
+import java.util.Random;
 
 public class TestInventory {
     @SuppressWarnings("Duplicates")
     public static void main(String[] args) {
-        Native.setProtected(true);
         System.setProperty("jna.library.path","/Users/casperskjaerris/Documents/cApp");
         SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/InvManSetting.cfg",""));
 
@@ -33,5 +35,7 @@ public class TestInventory {
         sim.performWholeSimulation();
         System.out.println(String.format("Final sales: %f. total lost sales: %f and we had %f restockings",sim.rval("soldProducts"),sim.rval("lostSales"),sim.rval("numberOfRestocking")));
         System.out.println(String.format("Just making sure time is now: %f",sim.getTime()));
+
+
     }
 }

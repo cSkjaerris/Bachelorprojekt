@@ -20,6 +20,10 @@ int main() {
     char* served = new char[s.length()+1];
     strcpy(served,s.c_str());
 
+    string a = "hasArrived";
+    char* hasArrived = new char[a.length()+1];
+    strcpy(hasArrived,a.c_str());
+
     //simulator = new BankSimulator(123,settingsPath); //Referencing simulator in JNALink
 
     for (int j = 0; j < 2; j++) {
@@ -48,7 +52,7 @@ int main() {
         performOneStepOfSimulation();
         if (i == 5) {
             cout << "After 5 steps queueSize = " << rvals(queueSize) << " and served is " << rvals(served) << " .Time is "
-                 << getTime() << endl;
+                 << getTime() << "arrivals is" << rvals(hasArrived) << endl;
         }
         if (i == 10) {
             cout << "After 10 steps queueSize = " << rvals(queueSize) << " and served is " << rvals(served) << " .Time is "
@@ -63,7 +67,7 @@ int main() {
     setSimulatorForNewSimulation(987654321,settingsPath);
     cout << "Running to the end now. New instance" << endl;
     performWholeSimulation();
-    cout << "final served is " << rvals(served) << " .Time is " << getTime() << endl;
+    cout << "final served is " << rvals(served) <<  "final arrived is" <<  rvals(hasArrived) <<" .Time is " << getTime() << endl;
     double test = rvals(queueSize);
     cout << "just checking queue size is " << test << endl;
 

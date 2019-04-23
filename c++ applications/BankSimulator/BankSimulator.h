@@ -24,6 +24,7 @@ private:
     double rateOfDesk;
     double closeTime;
     bool isDeskAvailable;
+    int arrivals;
     default_random_engine generator;
     uniform_real_distribution<double> randomDist;
     unsigned int served;

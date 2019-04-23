@@ -6,6 +6,7 @@ BankSimulator::BankSimulator(unsigned int seed, string settingsPath) {
 }
 
 void BankSimulator::arrive(){
+    arrivals++;
     if(simulationTime < closeTime){
         scheduleNextArrival();
     }
@@ -64,6 +65,8 @@ double BankSimulator::rval(string obs) {
         return served;
     if(obs == "queueSize")
         return deskQueue->size();
+    if(obs == "hasArrived")
+        return arrivals;
     return 0; //Default case
 }
 
@@ -83,6 +86,7 @@ void BankSimulator::reset(unsigned int seed, string settingsPath) {
     deskQueue = new queue<Event>();
     eventMapping = new map<double,Event>();
     served = 0;
+    arrivals=0;
     simulationTime = 0;
     isDeskAvailable = true;
     this->seed = seed;
