@@ -5,8 +5,24 @@
 #ifndef ARGOSFROMBINARY_MULTIVESTALOOPFUNCTIONS_H
 #define ARGOSFROMBINARY_MULTIVESTALOOPFUNCTIONS_H
 
+#include <argos3/core/simulator/loop_functions.h>
+#include <argos3/core/simulator/entity/floor_entity.h>
 
-class MultivestaLoopFunctions {
+using namespace argos;
+
+class MultivestaLoopFunctions : public CLoopFunctions {
+
+public:
+    MultivestaLoopFunctions();
+    virtual ~MultivestaLoopFunctions() {}
+
+    virtual void Init(TConfigurationNode& t_tree);
+    virtual void Reset();
+    virtual double GetXCoordinate();
+
+private:
+    CFloorEntity* m_pcFloor;
+    CRandom::CRNG* m_pcRNG;
 
 };
 
