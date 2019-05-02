@@ -22,6 +22,11 @@ int main(){
     string ls = "lostSales";
     char* lostSales = new char[ls.length()+1];
     strcpy(lostSales,ls.c_str());
+
+    string s = "stock";
+    char* stock = new char[s.length()+1];
+    strcpy(stock,s.c_str());
+
     setSimulatorForNewSimulation(9876543,settingsPath);
 
     for (int i = 0; i < 151; i++){
@@ -53,5 +58,34 @@ int main(){
     setSimulatorForNewSimulation(75484356, settingsPath);
     performWholeSimulation();
     cout << "Just making sure time is now: " << getTime() << endl;
+
+
+    cout << "Testing queries from soldAtRestock" << endl;
+    setSimulatorForNewSimulation(75484356, settingsPath);
+    int x = 1;
+    while (true){
+        auto restocks = rvals(restockings);
+        if ((int) restocks == x){
+            cout << "After " << restocks << " restockings, sold products are " << rvals(soldProducts) << ". It is day " << getTime() << endl;
+            x++;
+        }
+        if((int) restocks == 20){
+            break;
+        }
+        performOneStepOfSimulation();
+    }
+
+    cout << "Testing stock" << endl;
+    setSimulatorForNewSimulation(2937842, settingsPath);
+    int totalStock = 0;
+    for(int i = 0; i< 200; i++){
+        auto curStock = rvals(stock);
+        totalStock += (int) curStock;
+        if(i%10== 0 && i != 0){
+            cout << "Day " << getTime() << ": stock is " << curStock << " and average is" << totalStock/((double) i) << endl;
+        }
+        performOneStepOfSimulation();
+    }
+    cout << "Final average is " << totalStock/200.0 << endl;
 
 }

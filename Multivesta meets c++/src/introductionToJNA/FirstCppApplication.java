@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FirstCppApplication {
     public interface HelloLibrary extends Library{
-        HelloLibrary INSTANCE = (HelloLibrary) Native.load("HelloJNA", HelloLibrary.class);
+        HelloLibrary INSTANCE = Native.load("HelloJNA", HelloLibrary.class);
 
         void sayHello(String name);
         CHelloResponse.ByValue hello(String message);
@@ -38,7 +38,7 @@ public class FirstCppApplication {
     }
 
     public interface SimpleDLL extends Library{
-        SimpleDLL INSTANCE = (SimpleDLL) Native.load("simpleDLL",SimpleDLL.class);
+        SimpleDLL INSTANCE = Native.load("simpleDLL",SimpleDLL.class);
         int multiply(double a, double b, DoubleByReference result);
         int sumArray(double[] a, int length, DoubleByReference result);
         String getVersion();
@@ -51,7 +51,9 @@ public class FirstCppApplication {
     }
 
     public static void main(String[] args) {
-        System.out.println(System.getProperty("java.library.path"));
+        String jnaPath = System.getProperty("jna.library.path");
+        System.setProperty("jna.library.path",jnaPath != null && !jnaPath.isEmpty() ? jnaPath +
+                ":/Users/casperskjaerris/Documents/cApp" : "/Users/casperskjaerris/Documents/cApp");
         HelloLibrary.INSTANCE.sayHello("Foo");
 
         HelloLibrary.CHelloRequest req = new HelloLibrary.CHelloRequest();

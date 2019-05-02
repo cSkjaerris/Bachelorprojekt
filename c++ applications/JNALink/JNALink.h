@@ -9,14 +9,14 @@
 SimulatorLink* simulator;
 
 extern "C"{
-inline double getTime(){return simulator->getTime();}
-inline void performOneStepOfSimulation(){simulator->performOneStepOfSimulation();}
-inline void performWholeSimulation(){simulator->performWholeSimulation();}
-inline void setSimulatorForNewSimulation(int seed, char* settingsPath){simulator->setSimulatorForNewSimulation(seed,string(settingsPath));}
-inline double rval(int obs){return simulator->rval(obs);}
-inline double rvals(char* obs) {return simulator->rval(string(obs));}
+double getTime();
+void performOneStepOfSimulation();
+void performWholeSimulation();
+void setSimulatorForNewSimulation(int seed, char* settingsPath);
+double rval(int obs);
+double rvals(char* obs);
 }
 
-inline void registerSimulator(SimulatorLink* sim){simulator = sim;}
+void registerSimulator(SimulatorLink* sim);
 
 #endif

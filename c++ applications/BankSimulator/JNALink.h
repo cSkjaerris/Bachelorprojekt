@@ -13,9 +13,9 @@ extern "C"{
 double getTime();
 void performOneStepOfSimulation();
 void performWholeSimulation();
-void setSimulatorForNewSimulation(int seed, char* settingsPath);
+void setSimulatorForNewSimulation(int seed, char *settingsPath);
 double rval(int obs);
-double rvals(char* obs);
+double rvals(char *obs);
 }
 
 #endif

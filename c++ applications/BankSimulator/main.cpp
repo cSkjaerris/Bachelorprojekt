@@ -24,10 +24,11 @@ int main() {
     char* hasArrived = new char[a.length()+1];
     strcpy(hasArrived,a.c_str());
 
-    //simulator = new BankSimulator(123,settingsPath); //Referencing simulator in JNALink
+    //auto abc = new BankSimulator(123,settingsPath);
+    //registerSimulator(abc);
 
     for (int j = 0; j < 2; j++) {
-        setSimulatorForNewSimulation(123,settingsPath);
+        setSimulatorForNewSimulation(123, settingsPath);
         for (int i = 0; i < 20; i++) {
             performOneStepOfSimulation();
             if (i == 5) {
@@ -39,14 +40,14 @@ int main() {
                      << getTime() << endl;
             }
             if (i == 15) {
-                cout << "After 15 steps queueSize = " <<  rvals(queueSize) << " and served is " << rvals(served) << " .Time is "
+                cout << "After 15 steps queueSize = " << rvals(queueSize) << " and served is " << rvals(served) << " .Time is "
                      << getTime() << endl;
             }
         }
         cout << "final served is " << rvals(served) << " .Time is " << getTime() << endl;
         cout << "Trying again with same seed" << endl;
     }
-    setSimulatorForNewSimulation(345678,settingsPath);
+    setSimulatorForNewSimulation(345678, settingsPath);
     cout << "Trying new seed" << endl;
     for (int i = 0; i < 20; i++) {
         performOneStepOfSimulation();
@@ -64,12 +65,11 @@ int main() {
         }
     }
     cout << "final served is " << rvals(served) << " .Time is " << getTime() << endl;
-    setSimulatorForNewSimulation(987654321,settingsPath);
+    setSimulatorForNewSimulation(987654321, settingsPath);
     cout << "Running to the end now. New instance" << endl;
     performWholeSimulation();
-    cout << "final served is " << rvals(served) <<  "final arrived is" <<  rvals(hasArrived) <<" .Time is " << getTime() << endl;
+    cout << "final served is " << rvals(served) <<  "final arrived is" << rvals(hasArrived) <<" .Time is " << getTime() << endl;
     double test = rvals(queueSize);
     cout << "just checking queue size is " << test << endl;
-
 
 }

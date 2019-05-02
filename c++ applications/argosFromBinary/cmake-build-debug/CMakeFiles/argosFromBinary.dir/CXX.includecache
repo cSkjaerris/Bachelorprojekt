@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.cpp
+ArgosSimulatorWrapper.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.h
+
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.h
 SimulatorLink.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/SimulatorLink.h
@@ -17,14 +21,14 @@ argos3/core/simulator/space/space.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/argos3/core/simulator/space/space.h
 argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
+MultivestaLoopFunctions.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h
 
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.cpp
-JNALink.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.h
-
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.h
-ArgosSimulatorWrapper.h
-/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h
+argos3/core/simulator/loop_functions.h
+-
+argos3/core/simulator/entity/floor_entity.h
+-
 
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/config.h
 
@@ -136,6 +140,34 @@ unordered_map
 tr1/unordered_map
 -
 tr1/unordered_map
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/simulator/entity/floor_entity.h
+argos3/core/simulator/entity/entity.h
+-
+argos3/core/utility/math/vector2.h
+-
+argos3/core/utility/math/vector3.h
+-
+argos3/core/utility/datatypes/color.h
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/simulator/loop_functions.h
+argos3/core/utility/configuration/base_configurable_resource.h
+-
+argos3/core/simulator/simulator.h
+-
+argos3/core/simulator/space/space.h
+-
+argos3/core/utility/datatypes/color.h
+-
+argos3/core/utility/math/vector2.h
+-
+argos3/core/utility/math/vector3.h
+-
+argos3/core/utility/math/quaternion.h
+-
+argos3/core/simulator/physics_engine/physics_engine.h
 -
 
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/simulator/medium/medium.h
@@ -318,6 +350,16 @@ cxxabi.h
 typeinfo
 -
 algorithm
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/datatypes/color.h
+argos3/core/utility/datatypes/datatypes.h
+-
+argos3/core/utility/string_utilities.h
+-
+string.h
+-
+iostream
 -
 
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/datatypes/datatypes.h

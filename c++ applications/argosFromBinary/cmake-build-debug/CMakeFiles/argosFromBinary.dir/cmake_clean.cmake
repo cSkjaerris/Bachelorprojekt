@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o"
   "CMakeFiles/argosFromBinary.dir/JNALink.cpp.o"
+  "CMakeFiles/argosFromBinary.dir/MultivestaLoopFunctions.cpp.o"
+  "CMakeFiles/argosFromBinary.dir/CForagingLoopFunctions.cpp.o"
+  "CMakeFiles/argosFromBinary.dir/CFootBotForaging.cpp.o"
   "libargosFromBinary.pdb"
   "libargosFromBinary.dylib"
 )

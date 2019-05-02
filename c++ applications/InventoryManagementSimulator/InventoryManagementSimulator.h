@@ -49,6 +49,7 @@ public:
     int getSoldProducts() const;
 
     int getLostSales() const;
+    int getCurrentStock() const;
     double getTime() override;
     void performOneStepOfSimulation() override;
     void performWholeSimulation() override;

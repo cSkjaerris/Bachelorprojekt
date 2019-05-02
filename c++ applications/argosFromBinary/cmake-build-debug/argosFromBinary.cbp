@@ -17,11 +17,203 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="foraging_loop_functions">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libforaging_loop_functions.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 foraging_loop_functions"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="foraging_loop_functions/fast">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libforaging_loop_functions.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 foraging_loop_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="multivesta_loop_functions">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libmultivesta_loop_functions.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 multivesta_loop_functions"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="multivesta_loop_functions/fast">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libmultivesta_loop_functions.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 multivesta_loop_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="argosFromBinary">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libargosFromBinary.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 argosFromBinary"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="argosFromBinary/fast">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libargosFromBinary.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 argosFromBinary/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="footbot_foraging">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libfootbot_foraging.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 footbot_foraging"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="footbot_foraging/fast">
+				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libfootbot_foraging.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
+					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
+					<Add directory="/usr/local/include/lua5.3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 footbot_foraging/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -51,7 +243,6 @@
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -76,62 +267,11 @@
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestSimulationWrapper/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="argosFromBinary">
-				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libargosFromBinary.dylib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
-					<Add directory="/usr/local/include/lua5.3"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 argosFromBinary"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="argosFromBinary/fast">
-				<Option output="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug/libargosFromBinary.dylib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
-					<Add directory="/usr/local/include/lua5.3"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 argosFromBinary/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/casperskjaerris/Documents/DTU/6.\ Semester/Bachelorprojekt/c++\ applications/argosFromBinary/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -144,10 +284,34 @@
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.h">
 			<Option target="argosFromBinary"/>
 		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CFootBotForaging.cpp">
+			<Option target="argosFromBinary"/>
+			<Option target="footbot_foraging"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CFootBotForaging.h">
+			<Option target="argosFromBinary"/>
+			<Option target="footbot_foraging"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CForagingLoopFunctions.cpp">
+			<Option target="foraging_loop_functions"/>
+			<Option target="argosFromBinary"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CForagingLoopFunctions.h">
+			<Option target="foraging_loop_functions"/>
+			<Option target="argosFromBinary"/>
+		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.cpp">
 			<Option target="argosFromBinary"/>
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.h">
+			<Option target="argosFromBinary"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.cpp">
+			<Option target="multivesta_loop_functions"/>
+			<Option target="argosFromBinary"/>
+		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h">
+			<Option target="multivesta_loop_functions"/>
 			<Option target="argosFromBinary"/>
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/TestWrapper.cpp">

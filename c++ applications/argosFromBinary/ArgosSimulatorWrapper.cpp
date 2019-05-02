@@ -1,7 +1,12 @@
 #include "ArgosSimulatorWrapper.h"
 
+argos::CSimulator* cSimulator = NULL;
+MultivestaLoopFunctions* loopFunctions = NULL;
+
 ArgosSimulatorWrapper::ArgosSimulatorWrapper() {
     simulator =  &argos::CSimulator::GetInstance();
+
+
     argos::CDynamicLoading::LoadAllLibraries();
     isJustCreated = true;
 }
@@ -26,6 +31,8 @@ void ArgosSimulatorWrapper::setSimulatorForNewSimulation(unsigned int seed, stri
         simulator->LoadExperiment();
         isJustCreated = false;
         simulator->SetRandomSeed(seed);
+        cSimulator = &CSimulator::GetInstance();
+        loopFunctions = &dynamic_cast<MultivestaLoopFunctions&>(cSimulator->GetLoopFunctions());
     } else {
         simulator->Reset(seed);
     }
@@ -37,18 +44,8 @@ double ArgosSimulatorWrapper::rval(int obs) {
 }
 
 double ArgosSimulatorWrapper::rval(string obs) {
-    /*
-    auto loopfunctions = simulator->GetLoopFunctions();
-    auto simulationSpace = &simulator->GetSpace();
-    auto rootEntities = simulationSpace->GetRootEntityVector();
-    auto entity = &simulationSpace->GetEntity("fb0");
-    auto robot = (argos::CFootBotEntity*) entity;
-    auto embodiment = robot->GetEmbodiedEntity();
-    auto anchor = embodiment.GetEnabledAnchors().front();
-    auto positionX = (double) anchor->Position.GetX();
-     */
-    //return positionX;
-    return 0;
+
+    return loopFunctions->GetXCoordinate();
 }
 
 ArgosSimulatorWrapper::~ArgosSimulatorWrapper(){

@@ -17,11 +17,14 @@ public class EntrypointMultiVeStA {
                     //"-f", "/Users/casperskjaerris/Documents/cApp/stepsAfterXSteps.quatex",
                     //"-f", "/Users/casperskjaerris/Documents/cApp/timeAtSold.quatex",
                     //"-f", "/Users/casperskjaerris/Documents/cApp/timeAtRestock.quatex",
-                    "-f", "/Users/casperskjaerris/Documents/cApp/lostAtSold.quatex",
+                    "-f", "/Users/casperskjaerris/Documents/cApp/stockAtTime.quatex",
+                    //"-f", "/Users/casperskjaerris/Documents/cApp/lostAtSold.quatex",
+                    //"-f", "/Users/casperskjaerris/Documents/cApp/soldAtRestock.quatex",
+                    //"-f", "/Users/casperskjaerris/Documents/cApp/multipleExprInv.quatex",
                     //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAfterXSteps.quatex",
                     "-l", "/Users/casperskjaerris/Documents/cApp/oneLocal",
                     "-delta1", "0.5",
-                    "-a", "0.1",
+                    "-a", "0.05",
                     "-sd", "inventoryManagement.SimulatorState"
             };
             UniqueEntryPoint.main(input);

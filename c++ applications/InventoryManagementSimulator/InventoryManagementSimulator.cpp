@@ -18,9 +18,9 @@ void InventoryManagementSimulator::dailyDemand() {
         //If product in stock will be lower than the reorder point, place an order to get target inventory
         if(singleProductShop->inventory->productInStock - demand < singleProductShop->inventory->reorderPoint &&
             singleProductShop->inventory->productInStock > singleProductShop->inventory->reorderPoint){
-            int orderQuantity = singleProductShop->inventory->targetInventory -
-                    singleProductShop->inventory->productInStock - demand;
-            sendDeliveryRequest(orderQuantity);
+            int newInventory = singleProductShop->inventory->productInStock - demand;
+            int differenceBetweenTargetAndNew = singleProductShop->inventory->targetInventory - newInventory;
+            sendDeliveryRequest(differenceBetweenTargetAndNew);
         }
         singleProductShop->inventory->productInStock -= demand;
         soldProducts +=demand;
@@ -89,6 +89,10 @@ int InventoryManagementSimulator::getLostSales() const {
     return lostSales;
 }
 
+int InventoryManagementSimulator::getCurrentStock() const {
+    return singleProductShop->inventory->productInStock;
+}
+
 void InventoryManagementSimulator::sendDeliveryRequest(int orderSize) {
     auto shipmentDay = daysForResplenishingDistribution(generator) + simulationTime;
     if (shipmentDay <= endSimulation) {
@@ -137,6 +141,9 @@ double InventoryManagementSimulator::rval(string obs){
     }
     if (obs == "lostSales"){
         return lostSales;
+    }
+    if (obs == "stock"){
+        return singleProductShop->inventory->productInStock;
     }
     return -1;
 }

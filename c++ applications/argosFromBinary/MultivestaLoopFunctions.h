@@ -1,0 +1,14 @@
+//
+// Created by Casper Skjærris on 2019-04-29.
+//
+
+#ifndef ARGOSFROMBINARY_MULTIVESTALOOPFUNCTIONS_H
+#define ARGOSFROMBINARY_MULTIVESTALOOPFUNCTIONS_H
+
+
+class MultivestaLoopFunctions {
+
+};
+
+
+#endif //ARGOSFROMBINARY_MULTIVESTALOOPFUNCTIONS_H

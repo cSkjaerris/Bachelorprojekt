@@ -6,11 +6,13 @@
 #include "argos3/core/utility/plugins/dynamic_loading.h"
 #include "argos3/core/simulator/space/space.h"
 #include "argos3/plugins/robots/foot-bot/simulator/footbot_entity.h"
+#include "MultivestaLoopFunctions.h"
 
 class ArgosSimulatorWrapper : public SimulatorLink {
 private:
     argos::CSimulator* simulator;
     bool isJustCreated;
+
 public:
     ArgosSimulatorWrapper();
     ~ArgosSimulatorWrapper();
