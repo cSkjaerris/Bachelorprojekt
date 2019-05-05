@@ -4,6 +4,7 @@
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: ../ArgosSimulatorWrapper.cpp
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: ../ArgosSimulatorWrapper.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: ../MultivestaLoopFunctions.h
+CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: ../SimulatorLink.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/config.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/control_interface/ci_actuator.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/control_interface/ci_controller.h
@@ -55,7 +56,6 @@ CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerr
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/string_utilities.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/simulator/entities/wheeled_entity.h
-CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /usr/local/include/lua5.3/lauxlib.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /usr/local/include/lua5.3/lua.h
 CMakeFiles/argosFromBinary.dir/ArgosSimulatorWrapper.cpp.o: /usr/local/include/lua5.3/luaconf.h
@@ -174,6 +174,7 @@ CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: ../ArgosSimulatorWrapper.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: ../JNALink.cpp
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: ../JNALink.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: ../MultivestaLoopFunctions.h
+CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: ../SimulatorLink.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/config.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/control_interface/ci_actuator.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/control_interface/ci_controller.h
@@ -225,7 +226,6 @@ CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/c
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/string_utilities.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/simulator/entities/wheeled_entity.h
-CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /usr/local/include/lua5.3/lauxlib.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /usr/local/include/lua5.3/lua.h
 CMakeFiles/argosFromBinary.dir/JNALink.cpp.o: /usr/local/include/lua5.3/luaconf.h

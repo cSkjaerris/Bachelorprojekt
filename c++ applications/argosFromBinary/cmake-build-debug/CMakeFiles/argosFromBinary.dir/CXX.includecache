@@ -24,10 +24,80 @@ argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
 MultivestaLoopFunctions.h
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h
 
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CFootBotForaging.cpp
+CFootBotForaging.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CFootBotForaging.h
+argos3/core/utility/configuration/argos_configuration.h
+-
+argos3/core/utility/math/vector2.h
+-
+argos3/core/utility/logging/argos_log.h
+-
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CFootBotForaging.h
+argos3/core/control_interface/ci_controller.h
+-
+argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h
+-
+argos3/plugins/robots/generic/control_interface/ci_leds_actuator.h
+-
+argos3/plugins/robots/generic/control_interface/ci_range_and_bearing_actuator.h
+-
+argos3/plugins/robots/generic/control_interface/ci_range_and_bearing_sensor.h
+-
+argos3/plugins/robots/foot-bot/control_interface/ci_footbot_proximity_sensor.h
+-
+argos3/plugins/robots/foot-bot/control_interface/ci_footbot_light_sensor.h
+-
+argos3/plugins/robots/foot-bot/control_interface/ci_footbot_motor_ground_sensor.h
+-
+argos3/core/utility/math/rng.h
+-
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CForagingLoopFunctions.cpp
+CForagingLoopFunctions.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CForagingLoopFunctions.h
+argos3/core/simulator/simulator.h
+-
+argos3/core/utility/configuration/argos_configuration.h
+-
+argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
+-
+CFootBotForaging.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CFootBotForaging.h
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/CForagingLoopFunctions.h
+argos3/core/simulator/loop_functions.h
+-
+argos3/core/simulator/entity/floor_entity.h
+-
+argos3/core/utility/math/range.h
+-
+argos3/core/utility/math/rng.h
+-
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.cpp
+JNALink.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.h
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.h
+ArgosSimulatorWrapper.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.h
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.cpp
+argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
+-
+MultivestaLoopFunctions.h
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h
+
 /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h
 argos3/core/simulator/loop_functions.h
 -
 argos3/core/simulator/entity/floor_entity.h
+-
+
+/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/SimulatorLink.h
+iostream
 -
 
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/config.h
@@ -352,6 +422,18 @@ typeinfo
 algorithm
 -
 
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/datatypes/byte_array.h
+argos3/core/utility/datatypes/datatypes.h
+-
+argos3/core/utility/configuration/argos_exception.h
+-
+vector
+-
+iterator
+-
+unistd.h
+-
+
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/datatypes/color.h
 argos3/core/utility/datatypes/datatypes.h
 -
@@ -556,20 +638,66 @@ vector
 sstream
 -
 
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/control_interface/ci_footbot_light_sensor.h
+argos3/core/control_interface/ci_sensor.h
+-
+argos3/core/utility/math/angles.h
+-
+vector
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/control_interface/ci_footbot_motor_ground_sensor.h
+argos3/core/control_interface/ci_sensor.h
+-
+argos3/core/utility/math/vector2.h
+-
+argos3/core/utility/math/range.h
+-
+vector
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/control_interface/ci_footbot_proximity_sensor.h
+argos3/core/control_interface/ci_sensor.h
+-
+argos3/core/utility/math/angles.h
+-
+
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
 argos3/core/simulator/entity/composable_entity.h
 -
 argos3/plugins/simulator/entities/wheeled_entity.h
 -
 
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h
+argos3/core/control_interface/ci_actuator.h
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/generic/control_interface/ci_leds_actuator.h
+argos3/core/control_interface/ci_actuator.h
+-
+argos3/core/utility/datatypes/color.h
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/generic/control_interface/ci_range_and_bearing_actuator.h
+argos3/core/control_interface/ci_actuator.h
+-
+argos3/core/utility/datatypes/byte_array.h
+-
+
+/Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/generic/control_interface/ci_range_and_bearing_sensor.h
+argos3/core/control_interface/ci_sensor.h
+-
+argos3/core/utility/datatypes/datatypes.h
+-
+argos3/core/utility/datatypes/byte_array.h
+-
+argos3/core/utility/math/quaternion.h
+-
+
 /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/simulator/entities/wheeled_entity.h
 argos3/core/simulator/entity/entity.h
 -
 argos3/core/utility/math/vector3.h
--
-
-/Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
-iostream
 -
 
 /usr/local/include/lua5.3/lauxlib.h

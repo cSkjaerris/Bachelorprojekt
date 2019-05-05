@@ -5,6 +5,7 @@ CMakeFiles/TestSimulationWrapper.dir/TestWrapper.cpp.o
  /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/ArgosSimulatorWrapper.h
  /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/JNALink.h
  /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/MultivestaLoopFunctions.h
+ /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/SimulatorLink.h
  /Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/TestWrapper.cpp
  /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/config.h
  /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/control_interface/ci_actuator.h
@@ -57,7 +58,6 @@ CMakeFiles/TestSimulationWrapper.dir/TestWrapper.cpp.o
  /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/core/utility/string_utilities.h
  /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
  /Users/casperskjaerris/Documents/cApp/Argos/include/argos3/plugins/simulator/entities/wheeled_entity.h
- /Users/casperskjaerris/Documents/cApp/JNALink/include/SimulatorLink.h
  /usr/local/include/lua5.3/lauxlib.h
  /usr/local/include/lua5.3/lua.h
  /usr/local/include/lua5.3/luaconf.h

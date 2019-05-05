@@ -19,10 +19,6 @@ void MultivestaLoopFunctions::Init(TConfigurationNode &t_tree) {
     }
 }
 
-void MultivestaLoopFunctions::Reset() {
-    //Reset counters here once implemented
-}
-
 
 
 double MultivestaLoopFunctions::GetXCoordinate() {

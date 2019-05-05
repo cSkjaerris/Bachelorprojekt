@@ -24,7 +24,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -48,7 +47,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -82,7 +80,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -106,7 +103,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -130,7 +126,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -154,7 +149,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -178,7 +172,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -202,7 +195,6 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -236,7 +228,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -260,7 +251,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/casperskjaerris/Documents/cApp/JNALink/include"/>
 					<Add directory="/Users/casperskjaerris/Documents/cApp/Argos/include"/>
 					<Add directory="/usr/local/include/lua5.3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
@@ -314,6 +304,9 @@
 			<Option target="multivesta_loop_functions"/>
 			<Option target="argosFromBinary"/>
 		</Unit>
+		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/SimulatorLink.h">
+			<Option target="argosFromBinary"/>
+		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/TestWrapper.cpp">
 			<Option target="TestSimulationWrapper"/>
 		</Unit>
@@ -321,9 +314,6 @@
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake/FindArgos.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake/FindJNALink.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/Users/casperskjaerris/Documents/DTU/6. Semester/Bachelorprojekt/c++ applications/argosFromBinary/cmake/FindLua.cmake">

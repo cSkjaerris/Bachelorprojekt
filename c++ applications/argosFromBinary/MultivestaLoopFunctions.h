@@ -17,7 +17,6 @@ public:
     virtual ~MultivestaLoopFunctions() {}
 
     virtual void Init(TConfigurationNode& t_tree);
-    virtual void Reset();
     virtual double GetXCoordinate();
 
 private:

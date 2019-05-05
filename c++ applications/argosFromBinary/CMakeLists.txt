@@ -5,13 +5,13 @@ set(CMAKE_CXX_STANDARD 17)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-set(ArgosWrapperSources ArgosSimulatorWrapper.cpp ArgosSimulatorWrapper.h JNALink.cpp JNALink.h MultivestaLoopFunctions.cpp MultivestaLoopFunctions.h CForagingLoopFunctions.cpp CForagingLoopFunctions.h CFootBotForaging.cpp CFootBotForaging.h)
+set(ArgosWrapperSources ArgosSimulatorWrapper.cpp ArgosSimulatorWrapper.h JNALink.cpp JNALink.h MultivestaLoopFunctions.cpp MultivestaLoopFunctions.h CForagingLoopFunctions.cpp CForagingLoopFunctions.h CFootBotForaging.cpp CFootBotForaging.h SimulatorLink.h)
 
 add_library(argosFromBinary SHARED ${ArgosWrapperSources})
 
 include(FindPkgConfig)
-find_package(JNALink REQUIRED)
-include_directories(${JNALink_INCLUDEDIR})
+#find_package(JNALink REQUIRED)
+#include_directories(${JNALink_INCLUDEDIR})
 
 find_package(Argos REQUIRED)
 include_directories(${ARGOS_INCLUDEDIR})

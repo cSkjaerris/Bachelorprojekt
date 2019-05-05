@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sd
 
 CXX_DEFINES = -DargosFromBinary_EXPORTS
 
-CXX_INCLUDES = -I/Users/casperskjaerris/Documents/cApp/JNALink/include -I/Users/casperskjaerris/Documents/cApp/Argos/include -I/usr/local/include/lua5.3 
+CXX_INCLUDES = -I/Users/casperskjaerris/Documents/cApp/Argos/include -I/usr/local/include/lua5.3 
 

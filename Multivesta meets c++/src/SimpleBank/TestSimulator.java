@@ -1,4 +1,4 @@
-package mockupIntegration;
+package SimpleBank;
 
 import vesta.mc.ParametersForState;
 
@@ -29,5 +29,18 @@ public class TestSimulator {
         sim.performWholeSimulation();
         System.out.println(String.format("Final served: %f. Time is now: %f",sim.rval("served"),sim.getTime()));
         System.out.println(String.format("Just making sure queue size is %f",sim.rval("queueSize")));
+
+        System.out.println("Testing queue size through whole simulation");
+        sim.setSimulatorForNewSimulation(62738429);
+        while(true){
+            sim.performOneStepOfSimulation();
+            double time = sim.getTime();
+            if ((int) time % 10 == 0) {
+                System.out.println(String.format("Time: %d\t queueSize: %f", (int) time, sim.rval("queueSize")));
+            }
+            if (time >= 1000){
+                break;
+            }
+        }
     }
 }

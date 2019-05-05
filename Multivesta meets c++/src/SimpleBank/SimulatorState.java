@@ -1,4 +1,4 @@
-package mockupIntegration;
+package SimpleBank;
 
 import vesta.mc.NewState;
 import vesta.mc.ParametersForState;

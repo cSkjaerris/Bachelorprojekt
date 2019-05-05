@@ -231,12 +231,6 @@ FOOTBOT_LIBRARY:FILEPATH=/Users/casperskjaerris/Documents/cApp/Argos/lib/libargo
 GENERIC_ROBOT_LIBRARY:FILEPATH=/Users/casperskjaerris/Documents/cApp/Argos/lib/libargos3plugin_simulator_genericrobot.dylib
 
 //Path to a file.
-JNALink_INCLUDEDIR:PATH=/Users/casperskjaerris/Documents/cApp/JNALink/include
-
-//Path to a library.
-JNALink_LIBRARY:FILEPATH=/Users/casperskjaerris/Documents/cApp/JNALink/lib/libJNALink.a
-
-//Path to a file.
 LUA_INCLUDEDIR:PATH=/usr/local/include/lua5.3
 
 //Path to a library.

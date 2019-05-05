@@ -11,6 +11,7 @@
 class ArgosSimulatorWrapper : public SimulatorLink {
 private:
     argos::CSimulator* simulator;
+    MultivestaLoopFunctions preferredLoopfucntions;
     bool isJustCreated;
 
 public:

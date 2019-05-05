@@ -20,8 +20,6 @@ void setSimulatorForNewSimulation(int seed, char* settingsPath){
         cerr << "Could not load settings file";
         exit(1);
     }
-    string simulatorType;
-    settingsFile >> simulatorType;
     double Rc, Rd,closeTime;
     settingsFile >> Rc;
     settingsFile >> Rd;
