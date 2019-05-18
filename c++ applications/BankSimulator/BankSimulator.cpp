@@ -2,7 +2,7 @@
 
 BankSimulator::BankSimulator(unsigned int seed, string settingsPath) {
     randomDist = uniform_real_distribution(0.0,1.0);
-    reset(seed,settingsPath);
+    reset(seed, settingsPath);
 }
 
 void BankSimulator::arrive(){
@@ -10,6 +10,7 @@ void BankSimulator::arrive(){
     if(simulationTime < closeTime){
         scheduleNextArrival();
     }
+    //scheduleFinish(); //Only uncomment if desk should be independent
     if(isDeskAvailable){
         scheduleFinish();
         isDeskAvailable = false;
@@ -17,13 +18,13 @@ void BankSimulator::arrive(){
         deskQueue->push(Arrival);
     }
 }
+
 void BankSimulator::finish(){
     served++;
     if(!deskQueue->empty()){
         deskQueue->pop();
         scheduleFinish();
-    }
-    if(deskQueue->empty()){
+    } else{
         isDeskAvailable = true;
     }
 }
@@ -91,16 +92,16 @@ void BankSimulator::reset(unsigned int seed, string settingsPath) {
     isDeskAvailable = true;
     this->seed = seed;
     generator = default_random_engine(seed);
-    pair<double,Event> firstEvent = pair(0,Arrival);
-    eventMapping->insert(firstEvent);
 
     double rateOfCustomers, rateOfDesk, closeTime;
     fstream settingsFile;
     settingsFile.open(settingsPath);
+
     if(!settingsFile){
         cerr << "Could not load settings file";
         exit(1);
     }
+
     settingsFile >> rateOfCustomers;
     settingsFile >> rateOfDesk;
     settingsFile >> closeTime;
@@ -108,6 +109,9 @@ void BankSimulator::reset(unsigned int seed, string settingsPath) {
     this->rateOfCustomers = rateOfCustomers;
     this->rateOfDesk = rateOfDesk;
     this->closeTime = closeTime;
+    double firstArrival = calculateNextExponential(rateOfCustomers);
+    pair<double,Event> firstEvent = pair(firstArrival,Arrival);
+    eventMapping->insert(firstEvent);
 }
 
 double BankSimulator::calculateNextExponential(double rate) {

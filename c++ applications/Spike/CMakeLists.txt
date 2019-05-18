@@ -46,4 +46,6 @@ include_directories(${JNALink_INCLUDEDIR})
 
 
 target_link_libraries(${PROJECT_NAME} ${JNALink_LIBRARY})
-target_link_libraries(${PROJECT_NAME} ${Spike_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${CVODE_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${DSSD_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} -Wl,-force_load ${Spike_LIBRARY} -Wl,-force_load)

@@ -29,8 +29,7 @@ void DiscreteEventSimulator::finish(){
     if(!deskQueue->empty()){
         deskQueue->pop();
         scheduleFinish();
-    }
-    if(deskQueue->empty()){
+    } else{
         isDeskAvailable = true;
     }
 }

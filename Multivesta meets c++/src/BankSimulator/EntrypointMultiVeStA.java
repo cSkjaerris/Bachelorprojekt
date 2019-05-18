@@ -1,11 +1,7 @@
 package BankSimulator;
 
 import entrypointmultivesta.UniqueEntryPoint;
- // -client -m /Users/casperskjaerris/Documents/cApp/settings.ini -f /Users/casperskjaerris/Documents/cApp/stepsAfterXSteps.quatex -l /Users/casperskjaerris/Documents/cApp/oneLocal -delta1 0.1 -a 0.05 -sd SimpleBank.SimulatorState
 
-// -client -m /Users/casperskjaerris/Documents/cApp/settings.ini -f /Users/casperskjaerris/Documents/cApp/stepsAtTimeX.quatex -l /Users/casperskjaerris/Documents/cApp/oneLocal -delta1 0.1 -a 0.05 -sd SimpleBank.SimulatorState
-
-// -client -m /Users/casperskjaerris/Documents/cApp/settings.ini -f /Users/casperskjaerris/Documents/cApp/sizeAfterXSteps.quatex -l /Users/casperskjaerris/Documents/cApp/oneLocal -delta1 0.1 -a 0.05 -sd SimpleBank.SimulatorState
 public class EntrypointMultiVeStA {
     public static void main(String[] args) {
         String jnaPath = System.getProperty("jna.library.path");
@@ -15,14 +11,15 @@ public class EntrypointMultiVeStA {
         } else{
             String[] input = new String[]{
                 "-client",
-                        "-m", "/Users/casperskjaerris/Documents/cApp/settings.ini",
-                        //"-f", "/Users/casperskjaerris/Documents/cApp/stepsAfterXSteps.quatex",
-                        "-f", "/Users/casperskjaerris/Documents/cApp/timeAtArrived.quatex",
-                        //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAfterXSteps.quatex",
-                        "-l", "/Users/casperskjaerris/Documents/cApp/oneLocal",
-                        "-delta1", "0.5",
-                        "-a", "0.1",
-                        "-sd", "BankSimulator.SimulatorState"
+                "-m", "/Users/casperskjaerris/Documents/cApp/settings.ini",
+                //"-f", "/Users/casperskjaerris/Documents/cApp/stepsAfterXSteps.quatex",
+                "-f", "/Users/casperskjaerris/Documents/cApp/timeAtArrived.quatex",
+                //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAfterXSteps.quatex",
+                //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAtTime.quatex",
+                "-l", "/Users/casperskjaerris/Documents/cApp/oneLocal",
+                "-delta1", "0.5",
+                "-a", "0.05",
+                "-sd", "BankSimulator.SimulatorState"
             };
             UniqueEntryPoint.main(input);
         }

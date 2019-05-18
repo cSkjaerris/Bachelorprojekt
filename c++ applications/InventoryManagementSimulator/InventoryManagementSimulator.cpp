@@ -12,7 +12,8 @@ InventoryManagementSimulator::InventoryManagementSimulator(unsigned int seed, st
 }
 
 void InventoryManagementSimulator::dailyDemand() {
-    auto demand = sampleQuantityDistribution(generator); //Get random demand for the day
+    int demand = sampleQuantityDistribution(generator); //Get random demand for the day
+
     //If product in stock is greater than demand of the day, sell the products
     if (singleProductShop->inventory->productInStock >= demand){
         //If product in stock will be lower than the reorder point, place an order to get target inventory
@@ -95,6 +96,14 @@ int InventoryManagementSimulator::getCurrentStock() const {
 
 void InventoryManagementSimulator::sendDeliveryRequest(int orderSize) {
     auto shipmentDay = daysForResplenishingDistribution(generator) + simulationTime;
+    /*int randomNumb = daysForResplenishingDistribution(generator); // use this snippet if delivery is not uniform
+    int shipmentDay = simulationTime;
+    if(randomNumb < 25)
+        shipmentDay += 1;
+    else if (randomNumb < 85)
+        shipmentDay += 2;
+    else
+        shipmentDay +=3;*/
     if (shipmentDay <= endSimulation) {
         auto vectorOnShipmentDayEntry = eventMapping->find(shipmentDay);
         vector<Event> *vectorOnShipmentDay;

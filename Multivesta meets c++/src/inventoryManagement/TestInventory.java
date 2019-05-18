@@ -36,6 +36,13 @@ public class TestInventory {
         System.out.println(String.format("Final sales: %f. total lost sales: %f and we had %f restockings",sim.rval("soldProducts"),sim.rval("lostSales"),sim.rval("numberOfRestocking")));
         System.out.println(String.format("Just making sure time is now: %f",sim.getTime()));
 
+        sim.setSimulatorForNewSimulation(42034);
+        for(int i=0; i<101;i++ ){
+            if(i%5 == 0){
+                System.out.println(String.format("Time: %f, lost: %f",sim.getTime(),sim.rval("lostSales")));
+            }
+            sim.performOneStepOfSimulation();
+        }
 
     }
 }
