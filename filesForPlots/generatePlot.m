@@ -14,12 +14,12 @@ dataLess = readtable(plotType+sizes(1)+extension, 'Delimiter', ' ');
 dataEqual = readtable(plotType+sizes(2)+extension, 'Delimiter', ' ');
 dataGreat = readtable(plotType+sizes(3)+extension, 'Delimiter', ' ');
 
-figure;
+figure('Position', [1, 1, 800,600]);
 x = dataLess{:,{'x'}};
 yLess = dataLess{:,{yParamName}};
 yEqual = dataEqual{:,{yParamName}};
 yGreat = dataGreat{:,{yParamName}};
-plot(x,yLess,'b-',x,yEqual,'g-',x,yGreat,'r-');
+plot(x,yLess,'b-',x,yEqual,'k-',x,yGreat,'r-', 'linewidth', 5);
 xlabel('Time');
 ylabel('Queue size');
 title('Average queue size over time');

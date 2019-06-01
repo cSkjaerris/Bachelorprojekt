@@ -1,7 +1,7 @@
 #include "BankSimulator.h"
 
 BankSimulator::BankSimulator(unsigned int seed, string settingsPath) {
-    randomDist = uniform_real_distribution(0.0,1.0);
+    uniform0To1 = uniform_real_distribution(0.0,1.0);
     reset(seed, settingsPath);
 }
 
@@ -115,7 +115,7 @@ void BankSimulator::reset(unsigned int seed, string settingsPath) {
 }
 
 double BankSimulator::calculateNextExponential(double rate) {
-    double ran = randomDist(generator);
+    double ran = uniform0To1(generator);
     return (-log(ran))/rate;
 }
 

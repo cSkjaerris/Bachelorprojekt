@@ -41,7 +41,7 @@ private:
     void reset(unsigned int seed, string settingsPath);
 public:
     InventoryManagementSimulator(unsigned int seed, string settingsPath);
-    ~InventoryManagementSimulator() = default;
+    ~InventoryManagementSimulator() override = default ;
     void performSimulationStep();
     void completeSimulation();
     int getNumberOfRestocking() const;

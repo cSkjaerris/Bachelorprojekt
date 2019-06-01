@@ -18,4 +18,6 @@ double rval(int obs);
 double rvals(char *obs);
 }
 
+
+
 #endif

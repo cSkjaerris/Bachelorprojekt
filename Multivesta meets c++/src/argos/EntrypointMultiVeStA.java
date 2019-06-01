@@ -14,12 +14,9 @@ public class EntrypointMultiVeStA {
                     "-client",
                     "-m", "/Users/casperskjaerris/Documents/cApp/argos/diffusion10.argos",
                     "-f", "/Users/casperskjaerris/Documents/cApp/timeAtSteps.quatex",
-                    //"-f", "/Users/casperskjaerris/Documents/cApp/stepsAfterXSteps.quatex",
-                    //"-f", "/Users/casperskjaerris/Documents/cApp/timeAtArrived.quatex",
-                    //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAfterXSteps.quatex",
                     "-l", "/Users/casperskjaerris/Documents/cApp/oneLocal",
                     "-delta1", "0.5",
-                    "-a", "0.1",
+                    "-a", "0.05",
                     "-sd", "argos.SimulatorState"
             };
             UniqueEntryPoint.main(input);

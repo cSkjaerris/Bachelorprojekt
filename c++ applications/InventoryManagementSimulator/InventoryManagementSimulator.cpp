@@ -12,6 +12,13 @@ InventoryManagementSimulator::InventoryManagementSimulator(unsigned int seed, st
 }
 
 void InventoryManagementSimulator::dailyDemand() {
+    /*int demand; // For the comparison version
+    if (simulationTime == 1){
+        demand = 25;
+    } else {
+        demand = sampleQuantityDistribution(generator); //Get random demand for the day
+    }*/
+
     int demand = sampleQuantityDistribution(generator); //Get random demand for the day
 
     //If product in stock is greater than demand of the day, sell the products
@@ -104,6 +111,7 @@ void InventoryManagementSimulator::sendDeliveryRequest(int orderSize) {
         shipmentDay += 2;
     else
         shipmentDay +=3;*/
+
     if (shipmentDay <= endSimulation) {
         auto vectorOnShipmentDayEntry = eventMapping->find(shipmentDay);
         vector<Event> *vectorOnShipmentDay;
@@ -176,6 +184,7 @@ void InventoryManagementSimulator::reset(unsigned int seed, string settingsPath 
     settingsFile.close();
 
     daysForResplenishingDistribution = uniform_int_distribution(orderMinTime,orderMaxTime);
+    //daysForResplenishingDistribution = uniform_int_distribution(1,99);
     sampleQuantityDistribution = uniform_int_distribution(dailyDemandMin,dailyDemandMax);
     generator =  default_random_engine(seed);
     simulationTime = 0;
@@ -191,6 +200,7 @@ void InventoryManagementSimulator::reset(unsigned int seed, string settingsPath 
 
     auto initialStock = uniform_int_distribution(singleProductShop->inventory->reorderPoint,singleProductShop->inventory->targetInventory);
     singleProductShop->inventory->productInStock = initialStock(generator);
+    //singleProductShop->inventory->productInStock = 80;
     eventMapping->clear();
 
     auto firstDailyDemand = new vector<Event>();

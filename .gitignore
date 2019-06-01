@@ -59,3 +59,5 @@ spsim-dssdutil\.zip
 spsim-dssdutil/libdssd_util\.a
 
 spsim-dssdutil/libspsim_sr\.a
+
+*.zip

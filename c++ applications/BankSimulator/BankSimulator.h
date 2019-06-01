@@ -26,7 +26,7 @@ private:
     bool isDeskAvailable;
     int arrivals;
     default_random_engine generator;
-    uniform_real_distribution<double> randomDist;
+    uniform_real_distribution<double> uniform0To1;
     unsigned int served;
     map<double,Event>* eventMapping;
     queue<Event>* deskQueue;
@@ -47,6 +47,7 @@ public:
     void setSimulatorForNewSimulation(unsigned int seed, string settingsPath) override;
     double rval(int obs) override;
     double rval(string obs) override;
+
 };
 
 

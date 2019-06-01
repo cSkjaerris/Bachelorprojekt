@@ -27,6 +27,9 @@ int main() {
     //auto abc = new BankSimulator(123,settingsPath);
     //registerSimulator(abc);
 
+    cout << "size of events are " << sizeof(Event) << endl;
+    cout << "size of events are " << sizeof(Arrival) << endl;
+
     for (int j = 0; j < 2; j++) {
         setSimulatorForNewSimulation(123, settingsPath);
         for (int i = 0; i < 20; i++) {

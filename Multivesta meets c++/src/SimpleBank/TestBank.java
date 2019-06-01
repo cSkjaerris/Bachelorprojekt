@@ -2,7 +2,7 @@ package SimpleBank;
 
 import vesta.mc.ParametersForState;
 
-public class TestSimulator {
+public class TestBank {
     public static void main(String[] args) {
         System.setProperty("jna.library.path","/Users/casperskjaerris/Documents/cApp");
         SimulatorState sim = new SimulatorState(new ParametersForState("/Users/casperskjaerris/Documents/cApp/settings.ini",""));
