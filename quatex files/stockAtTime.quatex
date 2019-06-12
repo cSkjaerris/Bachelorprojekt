@@ -1,0 +1,2 @@
+stockAtTime(x) = if { s.rval("time") == x } then { s.rval("stock") } else # stockAtTime({x}) fi ;
+eval parametric(E[ stockAtTime(x) ], x,0.0,5.0, 100.0) ;

@@ -13,7 +13,7 @@ public class EntrypointMultiVeStA {
                 "-client",
                 "-m", "/Users/casperskjaerris/Documents/cApp/settings.ini",
                 //"-f", "/Users/casperskjaerris/Documents/cApp/stepsAfterXSteps.quatex",
-                "-f", "/Users/casperskjaerris/Documents/cApp/timeAtArrived.quatex",
+                "-f", "/Users/casperskjaerris/Documents/cApp/timeAtArrivedAndServed.quatex",
                 //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAfterXSteps.quatex",
                 //"-f", "/Users/casperskjaerris/Documents/cApp/sizeAtTime.quatex",
                 "-l", "/Users/casperskjaerris/Documents/cApp/oneLocal",

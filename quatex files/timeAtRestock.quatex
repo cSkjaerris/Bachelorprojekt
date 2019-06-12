@@ -1,0 +1,2 @@
+timeAtRestock(x) = if { s.rval("numberOfRestocking") == x } then { s.rval("time") } else # timeAtRestock({x}) fi ;
+eval parametric(E[ timeAtRestock(x) ], x,0.0,1.0,10.0) ;

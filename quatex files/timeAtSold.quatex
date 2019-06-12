@@ -1,0 +1,2 @@
+timeAtSold(x) = if { s.rval("soldProducts") >= x } then { s.rval("time") } else # timeAtSold({x}) fi ;
+eval parametric(E[ timeAtSold(x) ],x,0.0,5.0,100) ;

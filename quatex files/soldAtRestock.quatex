@@ -1,0 +1,2 @@
+soldAtRestock(x) = if { s.rval("numberOfRestocking") == x } then { s.rval("soldProducts") } else # soldAtRestock({x}) fi ;
+eval parametric(E[ soldAtRestock(x) ], x,1.0,1.0,20.0) ;

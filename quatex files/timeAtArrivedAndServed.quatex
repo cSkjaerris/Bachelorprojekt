@@ -1,0 +1,4 @@
+timeAtArrived(x) = if { s.rval("hasArrived") == x } then { s.rval("time") } else # timeAtArrived({x}) fi ;
+timeAtServed(x) = if { s.rval("served") == x } then { s.rval("time") } else # timeAtServed({x}) fi ;
+eval parametric(E[ timeAtArrived(x) ],E[ timeAtServed(x) ],x,0.0,1.0,10.0) ;
+

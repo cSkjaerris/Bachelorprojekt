@@ -1,0 +1,2 @@
+lostAtTime(x) = if { s.rval("time") >= x } then { s.rval("lostSales") } else # lostAtTime({x}) fi ;
+eval parametric(E[ lostAtTime(x) ], x, 0.0,5.0,100.0) ;

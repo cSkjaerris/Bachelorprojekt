@@ -1,0 +1,3 @@
+sizeAtStep(x) = if { s.rval("steps") == x } then { s.rval("queueSize") } else # sizeAtStep({x}) fi ;
+eval parametric(E[ sizeAtStep(x) ],x,0.0,50.0,2000.0) ;
+

@@ -1,0 +1,4 @@
+restockAtTime(x) = if { s.rval("time") == x } then { s.rval("numberOfRestocking") } else # restockAtTime({x}) fi ;
+soldAtTime(x) = if { s.rval("time") == x } then { s.rval("soldProducts") } else # soldAtTime({x}) fi ;
+lostAtTime(x) = if { s.rval("time") == x } then { s.rval("lostSales") } else # lostAtTime({x}) fi ;
+eval parametric(E[ restockAtTime(x) ], E[ soldAtTime(x) ], E[ lostAtTime(x) ],x,0.0,1.0,100.0) ;

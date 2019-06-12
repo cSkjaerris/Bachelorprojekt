@@ -1,10 +1,10 @@
 clear all
 clc
 
-plotType = "BankSizeAtTime";
+plotType = "InventoryStockAtTime";
 sizes = ["Less", "Equal", "Great"];
 extension = ".txt";
-yParamName = 'sizeAtTime_x_';
+yParamName = 'stockAtTime_x_';
 
 
 % for lost at time, stock at time, daily demand is changed
@@ -21,7 +21,7 @@ yEqual = dataEqual{:,{yParamName}};
 yGreat = dataGreat{:,{yParamName}};
 plot(x,yLess,'b-',x,yEqual,'k-',x,yGreat,'r-', 'linewidth', 5);
 xlabel('Time');
-ylabel('Queue size');
-title('Average queue size over time');
-legend('Arrival rate lower than desk', 'Arrival rate equal to desk', 'Arrival rate greater than desk')
+ylabel('Average stock');
+title('Average stock over time');
+legend('Daily sales ranging 1-10', 'Daily sales ranging 5-15', 'Daily sales ranging 10-20')
 grid on
